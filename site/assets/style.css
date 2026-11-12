@@ -73,8 +73,9 @@ a:hover { color: var(--signal); }
   position: sticky; top: 0; z-index: 20;
   display: flex; align-items: center; justify-content: space-between; gap: 12px;
   padding: 10px var(--gutter);
+  background: var(--sand);
   background: color-mix(in srgb, var(--sand) 86%, transparent);
-  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--rule);
 }
 .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; font-family: var(--f-display); font-size: 1.05rem; white-space: nowrap; }
@@ -178,7 +179,7 @@ html[lang="ar"] .prose th { font-family: var(--f-body); font-size: .9rem; letter
 .ts {
   display: inline-flex; align-items: center; gap: .35em; padding: .05em .55em .05em .45em; margin: 0 .1em; border-radius: 999px;
   font-family: var(--f-mono); font-size: .72rem; line-height: 1.7; text-decoration: none; white-space: nowrap; direction: ltr;
-  color: var(--signal); border: 1px solid color-mix(in srgb, var(--signal) 45%, transparent); background: color-mix(in srgb, var(--signal) 8%, transparent);
+  color: var(--signal); border: 1px solid var(--signal); border: 1px solid color-mix(in srgb, var(--signal) 45%, transparent); background: transparent; background: color-mix(in srgb, var(--signal) 8%, transparent);
   vertical-align: .08em;
 }
 .ts span { font-size: .6em; }
@@ -327,13 +328,13 @@ html[dir="rtl"] svg.dir { transform: scaleX(-1); }
 .bar .open-menu { display: none; }
 
 .drawer {
-  margin: 0; margin-inline-start: auto; height: 100dvh; max-height: none; width: min(380px, 88vw); padding: 0; border: 0;
+  margin: 0; margin-inline-start: auto; height: 100vh; height: 100dvh; max-height: none; width: min(380px, 88vw); padding: 0; border: 0;
   border-inline-start: 1px solid var(--rule); background: var(--paper); color: var(--ink);
   display: none; flex-direction: column; box-shadow: var(--shadow);
 }
 .drawer[open] { display: flex; animation: drawer-in .24s cubic-bezier(.2,.8,.2,1) both; }
 .drawer.closing { animation: drawer-out .18s ease-in both; }
-.drawer::backdrop { background: color-mix(in srgb, var(--ink) 45%, transparent); backdrop-filter: blur(2px); }
+.drawer::backdrop { background: rgba(0,0,0,.45); background: color-mix(in srgb, var(--ink) 45%, transparent); -webkit-backdrop-filter: blur(2px); backdrop-filter: blur(2px); }
 @keyframes drawer-in { from { transform: translateX(100%); } to { transform: none; } }
 @keyframes drawer-out { to { transform: translateX(100%); } }
 html[dir="rtl"] .drawer[open] { animation-name: drawer-in-rtl; }
@@ -341,7 +342,7 @@ html[dir="rtl"] .drawer.closing { animation-name: drawer-out-rtl; }
 @keyframes drawer-in-rtl { from { transform: translateX(-100%); } to { transform: none; } }
 @keyframes drawer-out-rtl { to { transform: translateX(-100%); } }
 .drawer-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 18px; border-bottom: 1px solid var(--rule);
-  background: repeating-linear-gradient(45deg, transparent 0 9px, color-mix(in srgb, var(--rule) 40%, transparent) 9px 10px); }
+  background: repeating-linear-gradient(45deg, transparent 0 9px, var(--rule) 9px 10px); }
 .drawer-title { font-family: var(--f-display); font-size: 1.15rem; }
 .drawer nav { flex: 1; overflow-y: auto; padding: 12px 10px 20px; }
 .drawer a { text-decoration: none; }
@@ -365,8 +366,8 @@ html[dir="rtl"] .drawer a[aria-current] { box-shadow: inset -3px 0 0 var(--signa
   .bottom-nav {
     display: grid; grid-template-columns: repeat(4, 1fr); position: fixed; inset-inline: 0; bottom: 0; z-index: 30;
     padding: 6px 8px calc(6px + env(safe-area-inset-bottom));
-    background: color-mix(in srgb, var(--paper) 92%, transparent); backdrop-filter: blur(10px);
-    border-top: 1px solid var(--rule); box-shadow: 0 -6px 20px color-mix(in srgb, var(--ink) 8%, transparent);
+    background: var(--paper); background: color-mix(in srgb, var(--paper) 92%, transparent); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+    border-top: 1px solid var(--rule); box-shadow: 0 -6px 20px rgba(0,0,0,.08);
   }
   .bn { display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 6px 2px; border: 0; background: none; color: var(--ink);
     font: inherit; font-family: var(--f-mono); font-size: .62rem; letter-spacing: .04em; text-transform: uppercase; text-decoration: none; border-radius: 10px; cursor: pointer; }
@@ -378,3 +379,4 @@ html[dir="rtl"] .drawer a[aria-current] { box-shadow: inset -3px 0 0 var(--signa
 }
 body.menu-open { overflow: hidden; }
 @media (prefers-reduced-motion: reduce) { .drawer[open], .drawer.closing { animation: none; } }
+.drawer.fallback { position: fixed; inset-block: 0; inset-inline-end: 0; z-index: 50; }

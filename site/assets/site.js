@@ -9,11 +9,16 @@
   });
   // slide-out menu
   var drawer = document.querySelector('.drawer');
-  if (drawer && drawer.showModal) {
+  // older Safari (iOS 15.3 and earlier) has no <dialog>: fall back to a plain open attribute
+  if (drawer && !drawer.showModal) {
+    drawer.showModal = function () { drawer.setAttribute('open', ''); drawer.classList.add('fallback'); };
+    drawer.close = function () { drawer.removeAttribute('open'); document.body.classList.remove('menu-open'); };
+  }
+  if (drawer) {
     document.querySelectorAll('.open-menu').forEach(function (b) {
       b.addEventListener('click', function () { drawer.showModal(); document.body.classList.add('menu-open'); });
     });
-    var shut = function () { drawer.classList.add('closing'); setTimeout(function () { drawer.classList.remove('closing'); drawer.close(); }, 180); };
+    var shut = function () { drawer.classList.add('closing'); setTimeout(function () { drawer.classList.remove('closing'); drawer.close(); document.body.classList.remove('menu-open'); }, 180); };
     drawer.querySelector('.drawer-close').addEventListener('click', shut);
     drawer.addEventListener('click', function (e) { if (e.target === drawer) shut(); });
     drawer.addEventListener('close', function () { document.body.classList.remove('menu-open'); });
