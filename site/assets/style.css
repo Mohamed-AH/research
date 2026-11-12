@@ -161,6 +161,7 @@ html[lang="ar"] .prose h3 { font-weight: 500; }
 .prose blockquote::before { content: ""; position: absolute; inset-inline-start: 0; top: .2em; bottom: .2em; width: 4px; background: var(--signal); border-radius: 2px; }
 .prose blockquote p { margin: 0; }
 .prose blockquote .ts { font-size: .7rem; vertical-align: middle; }
+html[lang="ar"] .prose blockquote { font-family: var(--f-body); font-weight: 600; line-height: 1.9; }
 .prose ul, .prose ol { padding-inline-start: 1.3em; }
 .prose li { margin: .55em 0; }
 .prose li::marker { color: var(--coral); }
@@ -313,3 +314,4 @@ html[dir="rtl"] .hero-fig .fig-t.cap { font-family: var(--f-body); font-size: 15
 @media (min-width: 901px) { .hero { min-height: 640px; } .hero-fig { top: 56%; } }
 .hero { overflow: visible; }
 @media (min-width: 901px) { .hero-fig { top: 50%; transform: translateY(-50%); width: min(40vw, 480px); } }
+.tsw { white-space: nowrap; }

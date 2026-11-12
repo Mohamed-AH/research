@@ -7,9 +7,9 @@ starts: "55:02"
 
 # 7. Patents as assets: three routes to money
 
-> "Their KPI was the number of patents, not their quality." Salman Butt, [58:00](https://www.youtube.com/watch?v=0t0UiPQnskk&t=3480s)
+> "Their KPI was the number of patents, not their quality." [58:00](https://www.youtube.com/watch?v=0t0UiPQnskk&t=3480s)
 
-## What Salman says
+## From the episode
 
 ### How KnowledgeX connects companies and researchers ([55:02](https://www.youtube.com/watch?v=0t0UiPQnskk&t=3302s))
 
@@ -43,7 +43,7 @@ A patent is an **asset with a running cost**. It can earn money by being used or
 - **Use** patents that fit an internal venture or a spin-out.
 - **Drop** patents on obsolete technology, so you stop paying fees for nothing.
 
-Counting patents rewards filing. Managing them rewards *using* them. That is the shift Salman is arguing for.
+Counting patents rewards filing. Managing them rewards *using* them. That is the shift the episode argues for.
 
 **Readiness levels.** KnowledgeX's site says SPINx scores four kinds of readiness: technology (TRL), business (BRL), commercial (CRL) and societal (SRL) ([KnowledgeX](https://knowledgex.sa/)). TRL is a standard 1 to 9 scale that NASA created, running from "basic principles observed" to "proven in operation". The others extend the same idea to the market.
 

@@ -7,9 +7,9 @@ starts: "27:52"
 
 # 4. From research to patent
 
-> "If we publish the paper at any conference or journal, the rights are gone. They become public." Salman Butt, [29:31](https://www.youtube.com/watch?v=0t0UiPQnskk&t=1771s)
+> "If we publish the paper at any conference or journal, the rights are gone. They become public." [29:31](https://www.youtube.com/watch?v=0t0UiPQnskk&t=1771s)
 
-## What Salman says
+## From the episode
 
 He walks through the pipeline used by companies like Microsoft and Google ([28:01](https://www.youtube.com/watch?v=0t0UiPQnskk&t=1681s)):
 

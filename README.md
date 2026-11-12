@@ -1,4 +1,4 @@
-# Research, explained
+# Claiming Ideas
 
 A bilingual (English and Arabic) companion site for the podcast episode with **Salman Butt**, co-founder of Salla and KnowledgeX. In the episode he talks about how research turns into business value.
 
