@@ -54,16 +54,11 @@ A sales forecast becomes an inventory decision through two simple ideas:
 
 That is why a range (3 to 4 times normal) is more useful than a single number. The 12-times outcome is a reminder that forecasts describe the data, while people's decisions change it. Concentrating all the marketing on one product helped push it far beyond what was forecast.
 
-## Interactive
+## Try it
 
-**The Eid forecasting playground.** It starts with one product's daily sales over two years, with Ramadan and Eid highlighted and moving through the Gregorian calendar.
+<div class="widget" data-widget="forecast-playground"></div>
 
-1. Choose a method: last year's number, seasonal average, or a fitted model with an uncertainty band.
-2. See the forecast for the coming Eid season as a band (for example 3 to 4 times normal).
-3. Set stock and marketing focus, then reveal what "actually" happened.
-4. A margin note compares this with the merchant's real result: 3 to 4 times forecast, about 12 times actual.
-
-A second toggle switches between the "researcher's view" (a 50-product heat map) and the "merchant's view" (top 3 bars). It makes Salman's point about translating research for the people who act on it.
+Synthetic data shaped like Salman's story. Try both forecasting methods, then reveal what happened when the merchant put all his stock and marketing behind one product. Then switch views to see why the merchant needed a simpler chart.
 
 ## Key terms
 

@@ -48,9 +48,11 @@ Salman's stories show that "researcher" is not one job. Common roles in industry
 
 The paper Salla's merchant benefited from needed a rainfall-model scientist *and* data scientists *and* someone to translate the results for the merchant. Most teams are mixed like this.
 
-## Interactive
+## Try it
 
-**Ecosystem map.** A world map marking the models Salman studied: Switzerland, the UK, the US, and Australia and New Zealand. Each shows one line on how its research reaches industry. A Saudi panel shows RDIA's four priorities. Readers click a priority to see example research topics.
+<div class="widget" data-widget="ecosystem"></div>
+
+Tap a region to see how its research reaches industry, or a Saudi priority to see the kind of research it covers.
 
 ## Key terms
 

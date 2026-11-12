@@ -37,9 +37,11 @@ The trade-off Salman describes is about timing. A product team gets paid next qu
 - **E-commerce companies that publish.** Salman's story is not unusual in Germany. Zalando, the country's largest fashion marketplace, has a science group that publishes on forecasting and replenishment. In 2025 it published a paper in *Scientific Reports* on a replenishment engine tested on about 2 million articles from about 800 merchants ([Zalando Engineering](https://engineering.zalando.com/posts/2026/01/publication-replenishment-engine.html)).
 - **Bottle caps.** Under EU Directive 2019/904, single-use plastic drink containers must keep their caps attached from 3 July 2024, because caps are among the items most often found on EU beaches ([IFLScience](https://www.iflscience.com/plastic-bottle-caps-across-europe-are-changing-but-why-74393)).
 
-## Interactive
+## Try it
 
-**The patience curve.** A chart with two lines over 10 years: a product launch, which earns early and flattens, and a research centre, which costs money for 7 to 8 years and then compounds. A slider sets the annual return (15% to 30%) and shows when the research line breaks even.
+<div class="widget" data-widget="patience-curve"></div>
+
+An illustrative model, not real company data. Move the annual return to see when a research centre overtakes a quick product launch.
 
 ## Key terms
 

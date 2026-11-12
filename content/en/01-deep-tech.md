@@ -25,9 +25,11 @@ There is no single official definition of deep tech, but most investors use a ve
 
 A useful test: *could a good software team rebuild this in six months from the public description?* If yes, it is probably not deep tech.
 
-## Interactive
+## Try it
 
-**"How deep is it?" ladder.** Readers drag a marker from *car* to *electric car* to *self-driving car*. Each step shows what new knowledge it needed: combustion engineering, then battery chemistry, then perception, machine learning and safety research.
+<div class="widget" data-widget="depth-ladder"></div>
+
+Step down the ladder to see how much new knowledge each kind of car needed before it could exist.
 
 ## Key terms
 

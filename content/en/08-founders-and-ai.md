@@ -32,11 +32,13 @@ starts: "1:06:37"
 
 **AI and research, as of late 2026.** Recent events show both sides of Salman's point. In September 2026 OpenAI announced that its AI agents, running about 10,000 at a time, had resolved a version of the Navier–Stokes problem, a famous open question in fluid dynamics. The proof was confirmed by the Lean proof checker, though human review was still under way ([Science News](https://www.sciencenews.org/article/ai-math-puzzle-navier-stokes-openai)). The work built on human mathematicians' progress on a closely related problem. The lesson matches his: AI is becoming a powerful research tool, while choosing the problem, designing the instrument and owning the result stay human.
 
-## Interactive
+## Try it
 
-**The founder triangle.** Readers place themselves and up to three co-founders on an Engineer, Hustler, Artist triangle and see where the team is thin. A note explains that this is a conversation tool, not a test.
+<div class="widget" data-widget="founder-triangle"></div>
 
-**What AI can and can't do in research.** A two-column card: *finding and summarising literature, analysing data, checking proofs* versus *choosing the question, designing new instruments, working on unpublished problems, taking responsibility*.
+Tap the triangle to place up to four founders. The closer a founder sits to a corner, the stronger that trait. It is a conversation starter, not a test.
+
+<div class="widget" data-widget="ai-card"></div>
 
 ## Closing
 

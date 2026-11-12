@@ -47,9 +47,11 @@ Counting patents rewards filing. Managing them rewards *using* them. That is the
 
 **Readiness levels.** KnowledgeX's site says SPINx scores four kinds of readiness: technology (TRL), business (BRL), commercial (CRL) and societal (SRL) ([KnowledgeX](https://knowledgex.sa/)). TRL is a standard 1 to 9 scale that NASA created, running from "basic principles observed" to "proven in operation". The others extend the same idea to the market.
 
-## Interactive
+## Try it
 
-**Route chooser.** Readers pick a sample patent: a forecasting method, a medical device or a materials process. They answer five questions (Is there a buyer? Is the team founder-ready? Does it fit an existing product? ...) and see which route scores highest and why. They also see what a commercialisation report would contain.
+<div class="widget" data-widget="route-chooser"></div>
+
+Answer five questions about a patent and see which route to market fits best. It is a simplified teaching tool, not the SPINx model.
 
 ## Key terms
 

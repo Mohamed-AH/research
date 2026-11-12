@@ -1,5 +1,6 @@
 ---
 title: "Research, explained"
+kicker: "A study companion · 8 chapters · English and Arabic"
 subtitle: "A companion to the conversation with Salman Butt on how research becomes business value"
 video: "https://www.youtube.com/watch?v=0t0UiPQnskk"
 length: "1:15:47"
@@ -13,18 +14,7 @@ length: "1:15:47"
 
 ## The eight chapters
 
-| # | Chapter | In the video |
-| --- | --- | --- |
-| 1 | [What technology and deep tech mean](01-deep-tech.md) | 1:34 to 11:53 |
-| 2 | [Deep tech in practice: reading heat](02-thermal-ai.md) | 11:53 to 18:31 |
-| 3 | [Why companies build research centres](03-research-centres.md) | 18:31 to 27:52, 41:43 to 45:59 |
-| 4 | [From research to patent](04-research-to-patent.md) | 27:52 to 33:08 |
-| 5 | [Forecasting: the Eid warehouse story](05-forecasting.md) | 33:08 to 41:43, 52:09 to 55:02 |
-| 6 | [Sponsored research and the Saudi ecosystem](06-sponsored-research.md) | 45:59 to 52:09 |
-| 7 | [Patents as assets: three routes to money](07-patents-as-assets.md) | 55:02 to 1:06:37 |
-| 8 | [Founders, teams and AI](08-founders-and-ai.md) | 1:06:37 to 1:15:47 |
-
-Plus a [Glossary](glossary.md) and [Sources and About](sources.md).
+<!-- chapters -->
 
 ## About the guest
 

@@ -34,9 +34,11 @@ The company is likely **Amplifai Health** (Riyadh), which is listed in Knowledge
 - In January 2024 it signed an agreement with KAUST to combine its thermography AI with KAUST's hyperspectral imaging ([KAUST](https://kaust.edu.sa/news/kaust-and-amplifai-health-combine-technologies-for-early-diabetes-detection)).
 - Its athlete product **NUR** runs on a thermal smart mirror. It tracks recovery and readiness, and was launched in Miami ([Middle East AI News, July 2026](https://www.middleeastainews.com/p/saudi-based-amplifai-launches-ai)).
 
-## Interactive
+## Try it
 
-**Thermal foot explainer.** Two stylised foot outlines in thermal colours. A slider raises the temperature gap between the left and right foot. A note shows the point where the gap becomes clinically meaningful and how hard that gap is to see by eye.
+<div class="widget" data-widget="thermal-feet"></div>
+
+Raise the temperature gap between the two feet. Notice how small a meaningful difference is, and how hard it is to see by eye. That is the job the AI does.
 
 ## Key terms
 

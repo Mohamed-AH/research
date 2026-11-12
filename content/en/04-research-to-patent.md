@@ -31,9 +31,11 @@ The order of steps is the whole point. **File first, publish second.** A patent 
 
 **Why the hybrid team is rare.** Patent claims are legal text describing technical boundaries. Writing them well needs someone who understands what the product will become *and* how a court will read the words.
 
-## Interactive
+## Try it
 
-**The pipeline diagram.** The seven steps drawn as a flow, with two branches: "not patentable, so publish or keep as know-how" and "patentable, so split it into patent and trade secret". Clicking each step shows who is in the room and what they produce.
+<div class="widget" data-widget="pipeline"></div>
+
+Tap a step to see who is in the room and what they produce.
 
 ## Key terms
 
