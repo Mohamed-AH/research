@@ -158,7 +158,7 @@ function buildLang(lang) {
       <circle class="dot" cx="324" cy="30" r="6"/>
       <text x="300" y="20" class="fig-t">12×</text>
       <text x="336" y="104" class="fig-t soft">3–4×</text>
-      <text x="30" y="290" class="fig-t">${u.fig} 0 · ${lang === 'ar' ? 'ذروة العيد' : 'The Eid peak'}</text>
+      ${lang === 'ar' ? '<text x="400" y="292" class="fig-t cap" text-anchor="end">شكل 0 · ذروة العيد</text>' : '<text x="30" y="290" class="fig-t">' + u.fig + ' 0 · The Eid peak</text>'}
     </svg>
   </figure>
 </section>
