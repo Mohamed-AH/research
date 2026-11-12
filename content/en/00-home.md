@@ -1,4 +1,5 @@
 ---
+description: "A study companion to a podcast episode on how research becomes business value: deep tech, research centres, patents, forecasting and founders, in eight short chapters."
 title: "Claiming Ideas"
 kicker: "A study companion · 8 chapters · English and Arabic"
 subtitle: "What one conversation teaches about turning research into business value"

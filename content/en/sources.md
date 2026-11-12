@@ -1,4 +1,5 @@
 ---
+description: "The episode, the sources cited on this site, and who made it. An independent study aid."
 title: "Sources and About"
 ---
 

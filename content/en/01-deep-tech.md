@@ -1,4 +1,5 @@
 ---
+description: "What makes a product deep tech, why it takes years and real money, and where the word algorithm comes from."
 chapter: 1
 title: "What technology and deep tech mean"
 video_chapters: [2, 3, 4]

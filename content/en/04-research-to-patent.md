@@ -1,4 +1,5 @@
 ---
+description: "The path from research to patent: why you file before you publish, what prior art is, and when to keep a trade secret."
 chapter: 4
 title: "From research to patent"
 video_chapters: [8]

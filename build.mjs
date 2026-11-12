@@ -8,6 +8,17 @@ const ROOT = path.dirname(new URL(import.meta.url).pathname);
 const OUT = path.join(ROOT, 'dist');
 const LANGS = ['en', 'ar'];
 const VIDEO = 'https://www.youtube.com/watch?v=0t0UiPQnskk';
+const SITE = 'https://claiming-ideas.pages.dev';
+const urlFor = (lang, slug) => `${SITE}/${lang}/${slug === '00-home' ? '' : slug}`; // Cloudflare Pages serves pages without .html
+
+// a short plain-text summary for search results and link previews
+function summarise(html) {
+  const m = html.replace(/<blockquote>[\s\S]*?<\/blockquote>/g, '').match(/<p>([\s\S]*?)<\/p>/);
+  if (!m) return '';
+  let t = m[1].replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/\s+/g, ' ').trim();
+  if (t.length > 160) t = t.slice(0, 157).replace(/[\s,،.؛:]+[^\s]*$/, '') + '…';
+  return t;
+}
 
 const UI = {
   en: {
@@ -131,7 +142,7 @@ function bottomNav(lang, pages, current) {
 </nav>`;
 }
 
-function layout({ lang, title, body, slug, pages, bodyClass = '' }) {
+function layout({ lang, title, body, slug, pages, description, bodyClass = '' }) {
   const u = UI[lang];
   const otherExists = fs.existsSync(path.join(ROOT, 'content', u.otherLang, `${slug}.md`));
   const otherHref = otherExists ? `../${u.otherLang}/${hrefFor(slug)}` : `../${u.otherLang}/index.html`;
@@ -142,10 +153,25 @@ function layout({ lang, title, body, slug, pages, bodyClass = '' }) {
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(fullTitle)}</title>
-<meta name="description" content="${esc(u.tagline)}">
+<meta name="description" content="${esc(description || u.tagline)}">
 <meta name="theme-color" content="#12343b">
+<link rel="canonical" href="${urlFor(lang, slug)}">
+<link rel="alternate" hreflang="${lang}" href="${urlFor(lang, slug)}">
+${otherExists ? `<link rel="alternate" hreflang="${u.otherLang}" href="${urlFor(u.otherLang, slug)}">` : ''}
+<link rel="alternate" hreflang="x-default" href="${SITE}/">
+<meta property="og:type" content="${slug === '00-home' ? 'website' : 'article'}">
+<meta property="og:site_name" content="${esc(u.site)}">
+<meta property="og:title" content="${esc(slug === '00-home' ? u.site : title)}">
+<meta property="og:description" content="${esc(description || u.tagline)}">
+<meta property="og:url" content="${urlFor(lang, slug)}">
+<meta property="og:locale" content="${lang === 'ar' ? 'ar_SA' : 'en_GB'}">
+<meta property="og:locale:alternate" content="${lang === 'ar' ? 'en_GB' : 'ar_SA'}">
+<meta property="og:image" content="${SITE}/assets/og-${lang}.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="${esc(u.site)}: ${esc(u.tagline)}">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
-<link rel="alternate" hreflang="${u.otherLang}" href="${otherHref}">
 <link rel="preload" href="../assets/fonts/${lang === 'ar' ? 'noto-naskh-arabic-arabic-400' : 'literata-latin-400'}.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/fonts.css">
 <link rel="stylesheet" href="../assets/style.css">
@@ -245,7 +271,9 @@ function buildLang(lang) {
       body = `<section class="chapter-head plain"><div class="lattice" aria-hidden="true"></div></section><article class="prose reveal">${html}</article>`;
     }
     const title = p.data.title || '';
-    fs.writeFileSync(path.join(outDir, hrefFor(p.slug)), layout({ lang, title, body, slug: p.slug, pages, bodyClass: p.slug === '00-home' ? 'is-home' : '' }));
+    const description = p.data.description || summarise(html);
+    allUrls.push({ lang, slug: p.slug });
+    fs.writeFileSync(path.join(outDir, hrefFor(p.slug)), layout({ lang, title, body, slug: p.slug, pages, description, bodyClass: p.slug === '00-home' ? 'is-home' : '' }));
   }
 }
 
@@ -260,5 +288,19 @@ function copyDir(src, dst) {
 fs.rmSync(OUT, { recursive: true, force: true });
 fs.mkdirSync(OUT, { recursive: true });
 copyDir(path.join(ROOT, 'site'), OUT);
+const allUrls = [];
 for (const lang of LANGS) buildLang(lang);
+// sitemap with language alternates, and robots.txt pointing to it
+const today = new Date().toISOString().slice(0, 10);
+const bySlug = {};
+for (const { lang, slug } of allUrls) (bySlug[slug] ||= []).push(lang);
+const entries = allUrls.map(({ lang, slug }) => `  <url><loc>${urlFor(lang, slug)}</loc><lastmod>${today}</lastmod>
+${bySlug[slug].map((l) => `    <xhtml:link rel="alternate" hreflang="${l}" href="${urlFor(l, slug)}"/>`).join('\n')}
+  </url>`);
+fs.writeFileSync(path.join(OUT, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+${entries.join('\n')}
+</urlset>
+`);
+fs.writeFileSync(path.join(OUT, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${SITE}/sitemap.xml\n`);
 console.log('Built to', OUT);

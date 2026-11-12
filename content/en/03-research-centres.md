@@ -1,4 +1,5 @@
 ---
+description: "Why a company would run a research centre, how papers and patents claim ideas, and when research overtakes the product."
 chapter: 3
 title: "Why companies build research centres"
 video_chapters: [6, 7, 10]

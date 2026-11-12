@@ -1,4 +1,5 @@
 ---
+description: "How medical thermography, cheap thermal cameras and AI combine into a deep-tech product, with a simple tool to try."
 chapter: 2
 title: "Deep tech in practice: reading heat"
 video_chapters: [5]

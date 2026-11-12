@@ -1,4 +1,5 @@
 ---
+description: "How sponsored research works, why companies fund university labs, and what the Saudi research system offers today."
 chapter: 6
 title: "Sponsored research and the Saudi ecosystem"
 video_chapters: [11]

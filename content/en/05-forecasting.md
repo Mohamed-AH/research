@@ -1,4 +1,5 @@
 ---
+description: "The Eid warehouse story: why a forecast of 3 to 4 times fell short of 12, and how better forecasting plans for peaks."
 chapter: 5
 title: "Forecasting: the Eid warehouse story"
 video_chapters: [9, 12]
