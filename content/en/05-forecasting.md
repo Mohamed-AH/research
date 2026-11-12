@@ -54,11 +54,6 @@ A sales forecast becomes an inventory decision through two simple ideas:
 
 That is why a range (3 to 4 times normal) is more useful than a single number. The 12-times outcome is a reminder that forecasts describe the data, while people's decisions change it. Concentrating all the marketing on one product helped push it far beyond what was forecast.
 
-## Context and evidence
-
-- **The 4 papers:** we have not found them yet. Searches by author, affiliation and topic returned nothing that clearly matches. *Request: titles or DOIs from KnowledgeX.*
-- **The story's numbers** (3 to 4 times forecast, about 12 times actual, SAR amounts) come from Salman's account on air.
-
 ## Interactive
 
 **The Eid forecasting playground.** It starts with one product's daily sales over two years, with Ramadan and Eid highlighted and moving through the Gregorian calendar.

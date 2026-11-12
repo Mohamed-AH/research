@@ -34,9 +34,8 @@ The trade-off Salman describes is about timing. A product team gets paid next qu
 
 ## Context and evidence
 
-- **Is 1,800 plausible?** Salman does not name the company. Zalando, Germany's largest fashion marketplace, has a science group that publishes on forecasting and replenishment. In 2025 it published a paper in *Scientific Reports* on a replenishment engine tested on about 2 million articles from about 800 merchants ([Zalando Engineering](https://engineering.zalando.com/posts/2026/01/publication-replenishment-engine.html)). We have not confirmed that this is the company, or the 1,800 figure.
+- **E-commerce companies that publish.** Salman's story is not unusual in Germany. Zalando, the country's largest fashion marketplace, has a science group that publishes on forecasting and replenishment. In 2025 it published a paper in *Scientific Reports* on a replenishment engine tested on about 2 million articles from about 800 merchants ([Zalando Engineering](https://engineering.zalando.com/posts/2026/01/publication-replenishment-engine.html)).
 - **Bottle caps.** Under EU Directive 2019/904, single-use plastic drink containers must keep their caps attached from 3 July 2024, because caps are among the items most often found on EU beaches ([IFLScience](https://www.iflscience.com/plastic-bottle-caps-across-europe-are-changing-but-why-74393)).
-- **The 15% to 30% return** is Salman's estimate. We have not found a source for it.
 
 ## Interactive
 

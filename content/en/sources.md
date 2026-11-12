@@ -6,7 +6,7 @@ title: "Sources and About"
 
 ## The episode
 
-- Salman Butt in conversation with Ahmed Attar, [YouTube](https://www.youtube.com/watch?v=0t0UiPQnskk), 1:15:47. *Podcast name and date to confirm.*
+- Salman Butt in conversation with Ahmed Attar, [YouTube](https://www.youtube.com/watch?v=0t0UiPQnskk), 1:15:47.
 - This site follows the episode's own 17 chapter markers, grouped into 8 chapters. Quotes are our translations from Saudi Arabic and are lightly condensed.
 
 ## Sources cited
@@ -27,15 +27,6 @@ title: "Sources and About"
 | [KAUST: KAUST startups surpass USD 1 billion raised (Nov 2025)](https://www.kaust.edu.sa/news/kaust-startups-surpass-1-billion-investments-raised) | 6 |
 | [McCarthy et al. (2023), The Science of Startups: the impact of founder personalities on company success, arXiv 2302.07968](https://arxiv.org/abs/2302.07968) | 8 |
 | [Science News: AI may have solved one of math's biggest puzzles (Sep 2026)](https://www.sciencenews.org/article/ai-math-puzzle-navier-stokes-openai) | 8 |
-
-## Still open
-
-- Salla's 4 forecasting papers (titles, venues, DOIs)
-- Use of the thermal mirror at a FIFA World Cup
-- The German marketplace and its 1,800-person research department
-- The source for the 40% to 55% founder-success figure
-- The brain-biopsy guide patent and its inventor
-- A source for the Swiss technology-transfer model
 
 ## About
 

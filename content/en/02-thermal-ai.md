@@ -28,13 +28,11 @@ None of the three is new on its own. The value is in combining them and proving 
 
 ## Context and evidence
 
-The company is very likely **Amplifai Health** (Riyadh), which is listed in KnowledgeX's portfolio. Salman does not name it on air, so treat this as our identification.
+The company is likely **Amplifai Health** (Riyadh), which is listed in KnowledgeX's portfolio.
 
 - Its diabetic-foot product **TFScan** segments the sole of the foot and analyses its temperature patterns. In a multicentre study with the Saudi Ministry of Health covering 1,120 people, the company says it can find the top 10% of highest-risk patients ([MENA Startup Digest, Dec 2025](https://menastartupdigest.com/?p=23961)).
 - In January 2024 it signed an agreement with KAUST to combine its thermography AI with KAUST's hyperspectral imaging ([KAUST](https://kaust.edu.sa/news/kaust-and-amplifai-health-combine-technologies-for-early-diabetes-detection)).
 - Its athlete product **NUR** runs on a thermal smart mirror. It tracks recovery and readiness, and was launched in Miami ([Middle East AI News, July 2026](https://www.middleeastainews.com/p/saudi-based-amplifai-launches-ai)).
-
-**Not verified:** we found no public record of the mirror being used at a FIFA World Cup, or of it predicting muscle strains specifically.
 
 ## Interactive
 

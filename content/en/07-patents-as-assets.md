@@ -47,12 +47,6 @@ Counting patents rewards filing. Managing them rewards *using* them. That is the
 
 **Readiness levels.** KnowledgeX's site says SPINx scores four kinds of readiness: technology (TRL), business (BRL), commercial (CRL) and societal (SRL) ([KnowledgeX](https://knowledgex.sa/)). TRL is a standard 1 to 9 scale that NASA created, running from "basic principles observed" to "proven in operation". The others extend the same idea to the market.
 
-## Context and evidence
-
-- **The Microsoft messenger example** could not be verified, and it is probably loose. Instant messaging had many inventors and patent holders. Treat it as an illustration of royalties, not a historical fact.
-- **"Patents last 15, 20 to 25 years"**: the standard term for an invention patent is 20 years from filing. Some extensions exist, for example for medicines.
-- **The Swiss model**: Switzerland's universities, such as ETH Zurich and EPFL, are known for strong technology-transfer offices that license university patents and support spin-offs. *Source to add.*
-
 ## Interactive
 
 **Route chooser.** Readers pick a sample patent: a forecasting method, a medical device or a materials process. They answer five questions (Is there a buyer? Is the team founder-ready? Does it fit an existing product? ...) and see which route scores highest and why. They also see what a commercialisation report would contain.

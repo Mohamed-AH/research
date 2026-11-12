@@ -9,7 +9,7 @@ length: "1:15:47"
 
 **The episode's argument in one paragraph.** Products can be copied, but knowledge that has been researched, published and patented cannot. Companies that want to last therefore need *knowledge assets*. That means research centres, papers, patents and the people who can turn them into products. Big companies around the world do this routinely. In Saudi Arabia it happens mostly at giants like Aramco and SABIC. Salman Butt, who co-founded the e-commerce platform Salla and later KnowledgeX, explains how the pipeline works, why it is hard to fund, and what it looks like when it works. His example is a forecast that helped a merchant sell out his warehouse before Eid.
 
-**How to use this site.** Watch the episode and keep this open beside it. Every chapter links to the exact minute where Salman says each thing. Each chapter then explains the idea in plain words, adds context and sources, and flags anything we could not verify.
+**How to use this site.** Watch the episode and keep this open beside it. Every chapter links to the exact minute where Salman says each thing. Each chapter then explains the idea in plain words and adds context and sources.
 
 ## The eight chapters
 
