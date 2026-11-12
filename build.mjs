@@ -16,7 +16,7 @@ const UI = {
     watch: 'Watch the episode', prev: 'Previous', next: 'Next', home: 'Home', glossary: 'Glossary',
     sources: 'Sources and About', other: 'العربية', otherLang: 'ar', theme: 'Switch light or dark theme',
     footer: 'An independent study aid. Not affiliated with Salla, KnowledgeX or the podcast.',
-    menu: 'Menu', close: 'Close menu', skip: 'Skip to content', fig: 'Fig.', mainNav: 'Page navigation',
+    menu: 'Menu', close: 'Close menu', skip: 'Skip to content', fig: 'Fig.', mainNav: 'Page navigation', topNav: 'Site menu',
   },
   ar: {
     dir: 'rtl', site: 'حجز خانات فكرية', tagline: 'رفيق دراسي لحوار عن البحث العلمي والقيمة التجارية',
@@ -24,7 +24,7 @@ const UI = {
     watch: 'شاهد الحلقة', prev: 'السابق', next: 'التالي', home: 'الرئيسية', glossary: 'المسرد',
     sources: 'المصادر وعن الموقع', other: 'English', otherLang: 'en', theme: 'تبديل الوضع الفاتح أو الداكن',
     footer: 'دليل دراسي مستقل، لا يتبع سلة ولا نولج إكس ولا البودكاست.',
-    menu: 'القائمة', close: 'إغلاق القائمة', skip: 'تخطَّ إلى المحتوى', fig: 'شكل', mainNav: 'التنقل بين الصفحات',
+    menu: 'القائمة', close: 'إغلاق القائمة', skip: 'تخطَّ إلى المحتوى', fig: 'شكل', mainNav: 'التنقل بين الصفحات', topNav: 'قائمة الموقع',
   },
 };
 
@@ -33,7 +33,7 @@ const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replac
 function slugFor(file) { return file.replace(/\.md$/, ''); }
 function hrefFor(slug) { return slug === '00-home' ? 'index.html' : `${slug}.html`; }
 
-function renderMarkdown(md) {
+function renderMarkdown(md, lang = 'en') {
   let html = marked.parse(md, { gfm: true });
   // internal links: foo.md -> foo.html, 00-home.md -> index.html
   html = html.replace(/href="([0-9a-z-]+)\.md"/g, (_, s) => `href="${hrefFor(s)}"`);
@@ -44,7 +44,7 @@ function renderMarkdown(md) {
   // other external links open in a new tab
   html = html.replace(/<a href="(https?:\/\/[^"]+)">/g, '<a href="$1" target="_blank" rel="noopener">');
   // tables scroll sideways on phones
-  html = html.replace(/<table>/g, '<div class="table-wrap"><table>').replace(/<\/table>/g, '</table></div>');
+  html = html.replace(/<table>/g, '<div class="table-wrap" tabindex="0" role="region" aria-label="' + (lang === 'ar' ? 'جدول' : 'Table') + '"><table>').replace(/<\/table>/g, '</table></div>');
   return html;
 }
 
@@ -156,7 +156,7 @@ function layout({ lang, title, body, slug, pages, bodyClass = '' }) {
 <a class="skip" href="#main">${u.skip}</a>
 <header class="bar">
   <a class="brand" href="index.html"><span class="mark" aria-hidden="true"></span><span>${esc(u.site)}</span></a>
-  <nav class="bar-nav">
+  <nav class="bar-nav" aria-label="${u.topNav}">
     <a class="home-link${slug === '00-home' ? ' is-here' : ''}" href="index.html"${slug === '00-home' ? ' aria-current="page"' : ''}>${ICON.home}<span>${u.home}</span></a>
     ${nav(lang, pages, slug)}
     <a class="lang" href="${otherHref}" hreflang="${u.otherLang}" lang="${u.otherLang}">${u.other}</a>
@@ -200,7 +200,7 @@ function buildLang(lang) {
   const chapters = pages.filter((p) => p.data.chapter);
 
   for (const p of pages) {
-    let html = renderMarkdown(p.content);
+    let html = renderMarkdown(p.content, lang);
     let body;
     if (p.slug === '00-home') {
       html = html.replace(/<h1>.*?<\/h1>/s, '');

@@ -48,7 +48,7 @@
         ['Energy and industrial leadership', 'Examples: hydrogen, carbon capture, advanced materials, smarter manufacturing.'],
         ['Economies of the future', 'Examples: artificial intelligence, digital commerce, space, robotics.'],
       ],
-      routeTitle: 'Which route to market?', yes: 'Yes', no: 'No',
+      routeTitle: 'Which route to market?', routePrompt: 'Answer a question to see which route fits best.', viewAria: 'The same forecast shown two ways: as a researcher sees it and as a merchant sees it.', triKeys: 'Keyboard: arrow keys move the marker, Enter places a founder.', yes: 'Yes', no: 'No',
       qs: [
         'Do established companies already sell in this market?',
         'Could others build the invention into their own products?',
@@ -105,7 +105,7 @@
         ['الريادة في الطاقة والصناعة', 'أمثلة: الهيدروجين، احتجاز الكربون، المواد المتقدمة، التصنيع الذكي.'],
         ['اقتصاديات المستقبل', 'أمثلة: الذكاء الاصطناعي، التجارة الرقمية، الفضاء، الروبوتات.'],
       ],
-      routeTitle: 'أي طريق إلى السوق؟', yes: 'نعم', no: 'لا',
+      routeTitle: 'أي طريق إلى السوق؟', routePrompt: 'أجب عن سؤال لترى أي طريق يناسب أكثر.', viewAria: 'التنبؤ نفسه بطريقتين: كما يراه الباحث وكما يراه التاجر.', triKeys: 'بلوحة المفاتيح: الأسهم تحرّك المؤشر، وEnter يضع مؤسسًا.', yes: 'نعم', no: 'لا',
       qs: [
         'هل توجد شركات قائمة تبيع في هذا السوق؟',
         'هل يمكن لغيرك دمج الاختراع في منتجاتهم؟',
@@ -154,7 +154,7 @@
       rows.forEach(function (r, k) { r.classList.toggle('on', k <= i); });
       panel.innerHTML = '<b>' + levels[i][0] + '</b><br>' + levels[i][2];
     }
-    el.appendChild(h('h4', { text: T.ladderTitle }));
+    el.appendChild(h('h3', { text: T.ladderTitle }));
     el.appendChild(seg([T.car, T.ev, T.av], draw, 0));
     el.appendChild(h('p', { class: 'label', text: T.layers + ' ↓ ' + T.depth, style: 'margin:.9em 0 .3em' }));
     el.appendChild(stack); el.appendChild(panel); draw(0);
@@ -193,10 +193,10 @@
       leftF.setAttribute('fill', 'url(#lf)'); rightF.setAttribute('fill', 'url(#rf)');
       stat.textContent = fmt(gap, 1) + ' °C';
       note.textContent = gap > 2.2 ? T.feetWarn : T.feetOk;
-      stat.style.color = gap > 2.2 ? css('--signal') : css('--ink');
+      stat.style.color = gap > 2.2 ? css('--signal-text') : css('--ink');
     }
     range.addEventListener('input', function () { gap = parseFloat(range.value); draw(); });
-    el.appendChild(h('h4', { text: T.feetTitle })); el.appendChild(svg);
+    el.appendChild(h('h3', { text: T.feetTitle })); el.appendChild(svg);
     out.appendChild(h('span', { class: 'label', text: T.gap })); out.appendChild(stat);
     el.appendChild(out); el.appendChild(range); el.appendChild(note); draw();
   }
@@ -233,21 +233,21 @@
       [[d[0], css('--coral'), T.product], [d[1], css('--signal'), T.research]].forEach(function (sr, k) {
         var pts = sr[0].map(function (v, i) { return x(i) + ',' + y(Math.max(YMIN, Math.min(YMAX, v))); }).join(' ');
         svg.appendChild(s('polyline', { points: pts, fill: 'none', stroke: sr[1], 'stroke-width': 3, 'stroke-linejoin': 'round' }));
-        var lt = svgText(x(N) + (XRTL ? 4 : -4), y(Math.min(YMAX - 2, sr[0][N])) + (k === 0 ? 20 : -10), sr[2], 'label', XRTL ? 'start' : 'end'); lt.style.fill = sr[1]; svg.appendChild(lt);
+        var lt = svgText(x(N) + (XRTL ? 4 : -4), y(Math.min(YMAX - 2, sr[0][N])) + (k === 0 ? 20 : -10), sr[2], 'label', XRTL ? 'start' : 'end'); lt.style.fill = k === 0 ? css('--coral-text') : css('--signal-text'); svg.appendChild(lt);
       });
       if (cross) svg.appendChild(s('circle', { cx: x(cross), cy: y(d[1][cross]), r: 6, fill: css('--paper'), stroke: css('--ink'), 'stroke-width': 2 }));
       lbl.textContent = fmt(r * 100) + '%';
       stat.textContent = (cross ? T.breakeven + ' ' + fmt(cross) + '.' : T.never) + ' ' + T.illus;
     }
     range.addEventListener('input', function () { r = parseInt(range.value, 10) / 100; draw(); });
-    el.appendChild(h('h4', { text: T.curveTitle })); el.appendChild(svg);
+    el.appendChild(h('h3', { text: T.curveTitle })); el.appendChild(svg);
     var row = h('div', { class: 'row' }); row.appendChild(h('span', { class: 'label', text: T.ret })); row.appendChild(lbl);
     el.appendChild(row); el.appendChild(range); el.appendChild(stat); draw();
   }
 
   /* 4. Pipeline */
   function pipeline(el) {
-    el.appendChild(h('h4', { text: T.pipeTitle }));
+    el.appendChild(h('h3', { text: T.pipeTitle }));
     var list = h('ol', { class: 'pipe' });
     var panel = h('div', { class: 'panel', 'aria-live': 'polite' });
     var btns = [];
@@ -323,7 +323,7 @@
       note.textContent = showActual ? T.fcActual : (method === 0 ? T.fcLast : T.fcHijri);
     }
     // researcher vs merchant view
-    var VW = W, vsvg = s('svg', { viewBox: '0 0 ' + VW + ' 220', role: 'img' });
+    var VW = W, vsvg = s('svg', { viewBox: '0 0 ' + VW + ' 220', role: 'img', 'aria-label': T.viewAria || '' });
     var vnote = h('p', { class: 'note' });
     function drawView() {
       vsvg.innerHTML = ''; var rr = rng(11);
@@ -344,7 +344,7 @@
         vnote.textContent = T.topNote;
       }
     }
-    el.appendChild(h('h4', { text: T.fcTitle }));
+    el.appendChild(h('h3', { text: T.fcTitle }));
     var row = seg([T.mLast, T.mHijri], function (i) { method = i; draw(); }, 1); row.appendChild(revealBtn);
     el.appendChild(row); el.appendChild(svg); el.appendChild(note);
     el.appendChild(h('hr', { style: 'border:0;border-top:1px dashed var(--rule);margin:18px 0' }));
@@ -355,7 +355,7 @@
 
   /* 6. Ecosystem */
   function ecosystem(el) {
-    el.appendChild(h('h4', { text: T.ecoTitle }));
+    el.appendChild(h('h3', { text: T.ecoTitle }));
     var panel = h('div', { class: 'panel', 'aria-live': 'polite' });
     var all = [];
     function group(title, items) {
@@ -376,7 +376,7 @@
   function routeChooser(el) {
     var ans = [null, null, null, null, null];
     var W = [[2, 0, 0], [2, 1, -1], [-1, 2, 0], [-1, 0, 3], [0, 1, 2]]; // yes-weights per question
-    el.appendChild(h('h4', { text: T.routeTitle }));
+    el.appendChild(h('h3', { text: T.routeTitle }));
     T.qs.forEach(function (q, i) {
       var row = h('div', { class: 'row', style: 'justify-content:space-between;margin:.5em 0' });
       row.appendChild(h('span', { text: q, style: 'flex:1 1 220px;font-size:.95rem' }));
@@ -385,6 +385,7 @@
     });
     var out = h('div', { class: 'panel' }); el.appendChild(out);
     function draw() {
+      if (ans.every(function (a) { return a === null; })) { out.innerHTML = ''; out.appendChild(h('div', { class: 'note', text: T.routePrompt })); return; }
       var sc = [1, 1, 1];
       ans.forEach(function (a, i) { if (a === true) W[i].forEach(function (w, k) { sc[k] += w; }); if (a === false) W[i].forEach(function (w, k) { sc[k] -= Math.max(0, w) * 0.5; }); });
       var mx = Math.max.apply(null, sc), best = sc.indexOf(mx);
@@ -403,7 +404,8 @@
   /* 8. Founder triangle */
   function founderTriangle(el) {
     var A = [200, 20], B = [30, 310], C = [370, 310], pts = [];
-    var svg = s('svg', { viewBox: '0 0 400 340', role: 'img', 'aria-label': T.triTitle, style: 'max-width:420px;margin:auto;cursor:crosshair;touch-action:manipulation' });
+    var svg = s('svg', { viewBox: '0 0 400 340', role: 'application', tabindex: '0', 'aria-label': T.triTitle + '. ' + T.triKeys, style: 'max-width:420px;margin:auto;cursor:crosshair;touch-action:manipulation' });
+    var cur = [(A[0] + B[0] + C[0]) / 3, (A[1] + B[1] + C[1]) / 3], focused = false;
     var out = h('div', { class: 'panel' });
     function bary(p) {
       var d = (B[1] - C[1]) * (A[0] - C[0]) + (C[0] - B[0]) * (A[1] - C[1]);
@@ -426,6 +428,7 @@
         svg.appendChild(s('circle', { cx: p[0], cy: p[1], r: 11, fill: css('--signal'), stroke: css('--paper'), 'stroke-width': 2 }));
         var t = svgText(p[0], p[1] + 4, fmt(i + 1), 'label', 'middle'); t.style.fill = css('--signal-ink'); svg.appendChild(t);
       });
+      if (focused) svg.appendChild(s('circle', { cx: cur[0], cy: cur[1], r: 13, fill: 'none', stroke: css('--ink'), 'stroke-width': 2, 'stroke-dasharray': '4 3' }));
       out.innerHTML = '';
       if (!pts.length) { out.textContent = T.triEmpty; return; }
       var cov = [0, 0, 0];
@@ -438,24 +441,34 @@
       var thin = names.filter(function (_, k) { return cov[k] < 0.5; });
       out.appendChild(h('div', { class: 'note', text: thin.length ? T.thin + ' ' + thin.join(RTL ? '، ' : ', ') : T.balanced }));
     }
+    function place(p) { if (pts.length >= 4) pts.shift(); pts.push(p); draw(); }
+        svg.addEventListener('blur', function () { if (focused) { focused = false; draw(); } });
+    svg.addEventListener('keydown', function (e) {
+      var d = { ArrowLeft: [-12, 0], ArrowRight: [12, 0], ArrowUp: [0, -12], ArrowDown: [0, 12] }[e.key];
+      if (d || e.key === 'Enter' || e.key === ' ') focused = true;
+      if (d) {
+        e.preventDefault(); var n = [cur[0] + d[0], cur[1] + d[1]];
+        if (!bary(n).some(function (v) { return v < 0; })) cur = n;
+        draw();
+      } else if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); place(cur.slice()); }
+    });
     svg.addEventListener('click', function (e) {
       var pt = svg.createSVGPoint(); pt.x = e.clientX; pt.y = e.clientY;
       var p = pt.matrixTransform(svg.getScreenCTM().inverse()), bc = bary([p.x, p.y]);
       if (bc.some(function (v) { return v < -0.02; })) return;
-      if (pts.length >= 4) pts.shift();
-      pts.push([p.x, p.y]); draw();
+      place([p.x, p.y]);
     });
     var clear = h('button', { type: 'button', class: 'chip', text: T.clear });
     clear.addEventListener('click', function () { pts = []; draw(); });
-    el.appendChild(h('h4', { text: T.triTitle })); el.appendChild(svg); el.appendChild(h('div', { class: 'row' }, [clear])); el.appendChild(out); draw();
+    el.appendChild(h('h3', { text: T.triTitle })); el.appendChild(svg); el.appendChild(h('div', { class: 'row' }, [clear])); el.appendChild(out); draw();
   }
 
   /* 9. AI card */
   function aiCard(el) {
-    el.appendChild(h('h4', { text: T.aiTitle }));
+    el.appendChild(h('h3', { text: T.aiTitle }));
     var g = h('div', { class: 'grid2' });
     [[T.can, T.canL], [T.cant, T.cantL]].forEach(function (c) {
-      var col = h('div', { class: 'col' }, [h('h5', { text: c[0] })]);
+      var col = h('div', { class: 'col' }, [h('h4', { text: c[0] })]);
       var ul = h('ul'); c[1].forEach(function (x) { ul.appendChild(h('li', { text: x })); }); col.appendChild(ul); g.appendChild(col);
     });
     el.appendChild(g);
