@@ -59,7 +59,7 @@ That is why a range (3 to 4 times normal) is more useful than a single number. T
 
 <div class="widget" data-widget="forecast-playground"></div>
 
-Synthetic data shaped like the merchant's story. Try both forecasting methods, then reveal what happened when the merchant put all his stock and marketing behind one product. Then switch views to see why the merchant needed a simpler chart.
+Synthetic data shaped like the merchant's story. Try both forecasting methods, then reveal what happened when the merchant put all his stock and marketing behind one product. Then switch views to see why the merchant needed a simpler chart. Finally, put in your own daily sales and supplier lead time to get a reorder point.
 
 ## Key terms
 

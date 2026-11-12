@@ -51,9 +51,9 @@ The paper Salla's merchant benefited from needed a rainfall-model scientist *and
 
 ## Try it
 
-<div class="widget" data-widget="ecosystem"></div>
+<div class="widget" data-widget="sponsored-deal"></div>
 
-Tap a region to see how its research reaches industry, or a Saudi priority to see the kind of research it covers.
+Tap the company, the lab or the student to see what each one puts into the deal and what it gets back.
 
 ## Key terms
 

@@ -22,6 +22,7 @@ title: "المصادر وعن الموقع"
 | [Middle East AI News: Amplifai launches AI thermal tool for athletes (Jul 2026)](https://www.middleeastainews.com/p/saudi-based-amplifai-launches-ai) | 2 |
 | [Zalando Engineering: replenishment engine publication (Jan 2026)](https://engineering.zalando.com/posts/2026/01/publication-replenishment-engine.html) | 3 |
 | [IFLScience: EU tethered bottle caps](https://www.iflscience.com/plastic-bottle-caps-across-europe-are-changing-but-why-74393) | 3 |
+| [AngelList Education Center: What is a venture capital fund?](https://www.angellist.com/learn/venture-capital-fund) | 3 |
 | [Wikipedia: Makridakis Competitions](https://en.wikipedia.org/wiki/Makridakis_Competitions) | 5 |
 | [Makridakis, Spiliotis and Assimakopoulos (2022), M5 accuracy competition, *International Journal of Forecasting*](https://econpapers.repec.org/RePEc:eee:intfor:v:38:y:2022:i:4:p:1346-1364) | 5 |
 | [The National: Saudi Arabia outlines new plan for R&D and innovation (Jul 2022)](https://www.thenationalnews.com/business/economy/2022/07/01/saudi-arabia-outlines-new-plan-for-research-development-and-innovation) | 6 |

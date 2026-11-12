@@ -35,19 +35,6 @@
       fcActual: 'What happened: the merchant stocked one product and put all his marketing behind it. Sales reached about 12 times normal, and the warehouse was empty before Eid.',
       viewR: "Researcher's view", viewM: "Merchant's view", heatNote: '48 products × 10 weeks. Every cell is a forecast. Hard to act on.', topNote: 'The same forecast, cut to the top 3 products. Easy to act on.',
       prod: 'Product', normal: 'times normal sales',
-      ecoTitle: 'Where research meets industry', regions: 'Models abroad', priorities: "Saudi Arabia's national R&D priorities",
-      reg: [
-        ['Switzerland', 'Universities such as ETH Zurich and EPFL run technology-transfer offices that license patents to companies and help researchers start spin-offs.'],
-        ['United Kingdom', 'Companies co-fund PhDs and university research, and university spin-out companies are a common route to market.'],
-        ['United States', 'Since 1980, universities can own and license inventions from federally funded research. Silicon Valley adds venture capital on top.'],
-        ['Australia and New Zealand', 'Government programmes fund long-term research partnerships between universities and industry.'],
-      ],
-      pri: [
-        ['Health and wellness', 'Examples: early disease detection, genomics, healthy ageing, medical devices.'],
-        ['Sustainable environment and essential needs', 'Examples: water, food security, recycling, climate resilience.'],
-        ['Energy and industrial leadership', 'Examples: hydrogen, carbon capture, advanced materials, smarter manufacturing.'],
-        ['Economies of the future', 'Examples: artificial intelligence, digital commerce, space, robotics.'],
-      ],
       routeTitle: 'Which route to market?', routePrompt: 'Answer a question to see which route fits best.', viewAria: 'The same forecast shown two ways: as a researcher sees it and as a merchant sees it.', triKeys: 'Keyboard: arrow keys move the marker, Enter places a founder.', yes: 'Yes', no: 'No',
       qs: [
         'Do established companies already sell in this market?',
@@ -58,6 +45,21 @@
       ],
       routes: ['License for royalties', 'Corporate venture', 'Spin-out'],
       routeWhy: ['Best when others can build it in and the market already exists.', 'Best when it strengthens a product the owner already sells.', 'Best when there is a committed team and proof that customers will pay.'],
+      fund: 'Venture fund life', fundNote: 'Most venture funds must return their money within about 10 years, so research that pays off later needs a patient owner.',
+      pubFirst: 'What if they publish first?', pubOn: 'Published first',
+      pubLost: 'Published before filing. In most countries the paper now counts as prior art against your own patent, so steps 2 to 6 are lost. A few countries allow a short grace period for the inventor\'s own disclosure, but you cannot rely on it everywhere.',
+      planTitle: 'Plan your own peak', daily: 'Usual daily sales (units)', lead: 'Supplier lead time (days)',
+      planExp: 'Expected demand while you wait for stock (3.5× normal)', planSafe: 'Safety stock to cover the top of the 3 to 4× band', planRop: 'Reorder point: reorder when stock falls to',
+      planStory: 'If the peak reaches 12×, as it did in the story, that stock lasts about', days: 'days', units2: 'units',
+      planNote: 'Reorder point = demand during the lead time + safety stock. Illustrative, using the story\'s 3 to 4× forecast band.',
+      dealTitle: 'Anatomy of a sponsored-research deal', dealPick: 'Tap a party to see what it puts in and what it gets back.', putsIn: 'Puts in', getsBack: 'Gets back',
+      parties: [
+        ['Company', 'Money and a real question it expects to face in two or three years.', 'Early access to results and, usually, first rights to license any patent.'],
+        ['University lab', 'Expertise, equipment and research time.', 'Funding, real-world data, and the right to publish after a short review delay.'],
+        ['Student or researcher', 'Months or years of focused work.', 'A stipend, real data to work on, and often a job offer.'],
+      ],
+      flow: ['Company funds a question', 'Lab does the research', 'Patent filed first, paper published after', 'Company licenses the result'],
+      flowWho: [[0, 1], [1, 2], [1, 2, 0], [0, 1]],
       triTitle: 'The founder triangle', eng: 'Engineer', hus: 'Hustler', art: 'Artist', clear: 'Clear', coverage: 'Team coverage',
       triEmpty: 'Tap inside the triangle to place a founder.', thin: 'Thin spot:', balanced: 'Balanced: every corner has someone strong.',
       aiTitle: 'What AI can and can\'t do in research', can: 'AI can help', cant: 'Still human',
@@ -92,19 +94,6 @@
       fcActual: 'ما حدث فعلًا: خزّن التاجر منتجًا واحدًا ووضع كل تسويقه عليه، فبلغت المبيعات نحو 12 ضعف المعتاد وفرغ المستودع قبل العيد.',
       viewR: 'عرض الباحث', viewM: 'عرض التاجر', heatNote: '48 منتجًا × 10 أسابيع، كل خانة تنبؤ. يصعب التصرّف بناءً عليها.', topNote: 'التنبؤ نفسه، مختصرًا في أعلى 3 منتجات. يسهل التصرّف بناءً عليه.',
       prod: 'منتج', normal: 'أضعاف المبيعات المعتادة',
-      ecoTitle: 'حيث يلتقي البحث بالصناعة', regions: 'نماذج من الخارج', priorities: 'الأولويات الوطنية للبحث والتطوير في السعودية',
-      reg: [
-        ['سويسرا', 'تدير جامعات مثل المعهد الفدرالي للتقنية في زيورخ ولوزان مكاتب لنقل التقنية ترخّص البراءات للشركات وتساعد الباحثين على تأسيس شركات منبثقة.'],
-        ['المملكة المتحدة', 'تشارك الشركات في تمويل الدكتوراه والأبحاث الجامعية، والشركات الجامعية المنبثقة طريق شائع إلى السوق.'],
-        ['الولايات المتحدة', 'منذ 1980 يحق للجامعات امتلاك الاختراعات الناتجة عن أبحاث ممولة اتحاديًا وترخيصها، ويضيف وادي السيليكون رأس المال الجريء.'],
-        ['أستراليا ونيوزيلندا', 'تموّل برامج حكومية شراكات بحثية طويلة الأمد بين الجامعات والصناعة.'],
-      ],
-      pri: [
-        ['صحة الإنسان', 'أمثلة: الكشف المبكر عن الأمراض، الجينوم، الشيخوخة الصحية، الأجهزة الطبية.'],
-        ['استدامة البيئة والاحتياجات الأساسية', 'أمثلة: المياه، الأمن الغذائي، إعادة التدوير، التكيّف المناخي.'],
-        ['الريادة في الطاقة والصناعة', 'أمثلة: الهيدروجين، احتجاز الكربون، المواد المتقدمة، التصنيع الذكي.'],
-        ['اقتصاديات المستقبل', 'أمثلة: الذكاء الاصطناعي، التجارة الرقمية، الفضاء، الروبوتات.'],
-      ],
       routeTitle: 'أي طريق إلى السوق؟', routePrompt: 'أجب عن سؤال لترى أي طريق يناسب أكثر.', viewAria: 'التنبؤ نفسه بطريقتين: كما يراه الباحث وكما يراه التاجر.', triKeys: 'بلوحة المفاتيح: الأسهم تحرّك المؤشر، وEnter يضع مؤسسًا.', yes: 'نعم', no: 'لا',
       qs: [
         'هل توجد شركات قائمة تبيع في هذا السوق؟',
@@ -115,6 +104,21 @@
       ],
       routes: ['الترخيص مقابل حق الامتياز', 'بناء مشروع مؤسسي', 'شركة منبثقة'],
       routeWhy: ['الأنسب حين يستطيع غيرك دمجه والسوق موجود أصلًا.', 'الأنسب حين يقوّي منتجًا يبيعه المالك أصلًا.', 'الأنسب حين يوجد فريق ملتزم ودليل على أن العملاء سيدفعون.'],
+      fund: 'عمر الصندوق الجريء', fundNote: 'معظم صناديق رأس المال الجريء مطالبة بإعادة أموالها خلال نحو 10 سنوات، لذلك يحتاج البحث الذي يؤتي ثماره لاحقًا إلى مالك صبور.',
+      pubFirst: 'ماذا لو نشروا أولًا؟', pubOn: 'نُشر أولًا',
+      pubLost: 'نُشرت الورقة قبل التسجيل. في معظم الدول تُعدّ الورقة الآن حالة تقنية سابقة ضد براءتك أنت، فتضيع الخطوات من 2 إلى 6. وتمنح بعض الدول فترة سماح قصيرة لإفصاح المخترع نفسه، لكن لا يمكن الاعتماد عليها في كل مكان.',
+      planTitle: 'خطّط لذروتك أنت', daily: 'المبيعات اليومية المعتادة (وحدات)', lead: 'مدة التوريد من المورّد (أيام)',
+      planExp: 'الطلب المتوقع أثناء انتظار البضاعة (3.5 أضعاف المعتاد)', planSafe: 'مخزون الأمان لتغطية أعلى نطاق 3 إلى 4 أضعاف', planRop: 'نقطة إعادة الطلب: اطلب حين ينزل المخزون إلى',
+      planStory: 'لو بلغت الذروة 12 ضعفًا كما في القصة، يكفي هذا المخزون نحو', days: 'أيام', units2: 'وحدة',
+      planNote: 'نقطة إعادة الطلب = الطلب خلال مدة التوريد + مخزون الأمان. أرقام توضيحية تستخدم نطاق التنبؤ في القصة (3 إلى 4 أضعاف).',
+      dealTitle: 'تشريح صفقة بحث مدعوم', dealPick: 'اضغط على طرف لترى ما يقدّمه وما يحصل عليه.', putsIn: 'يقدّم', getsBack: 'يحصل على',
+      parties: [
+        ['الشركة', 'المال، وسؤالًا حقيقيًا تتوقع أن تواجهه بعد سنتين أو ثلاث.', 'النتائج مبكرًا، وغالبًا الأولوية في ترخيص أي براءة.'],
+        ['المختبر الجامعي', 'الخبرة والأجهزة ووقت البحث.', 'التمويل، وبيانات حقيقية، وحق النشر بعد تأخير قصير للمراجعة.'],
+        ['الطالب أو الباحث', 'أشهرًا أو سنوات من العمل المركّز.', 'مكافأة، وبيانات حقيقية يعمل عليها، وكثيرًا ما يحصل على عرض عمل.'],
+      ],
+      flow: ['الشركة تموّل سؤالًا', 'المختبر يجري البحث', 'تُسجَّل البراءة أولًا ثم تُنشر الورقة', 'الشركة ترخّص النتيجة'],
+      flowWho: [[0, 1], [1, 2], [1, 2, 0], [0, 1]],
       triTitle: 'مثلث المؤسسين', eng: 'المهندس', hus: 'المُبادِر', art: 'الفنان', clear: 'مسح', coverage: 'تغطية الفريق',
       triEmpty: 'اضغط داخل المثلث لتضع مؤسسًا.', thin: 'نقطة ضعف:', balanced: 'متوازن: في كل زاوية شخص قوي.',
       aiTitle: 'ما يقدر عليه الذكاء الاصطناعي في البحث وما لا يقدر', can: 'يساعد فيه الذكاء الاصطناعي', cant: 'يبقى بشريًا',
@@ -226,6 +230,9 @@
         svg.appendChild(s('line', { x1: x(0), x2: x(N), y1: y(v), y2: y(v), stroke: css('--rule'), 'stroke-dasharray': v === 0 ? '' : '2 4' }));
         svg.appendChild(svgText(XRTL ? x(0) + 6 : x(0) - 6, y(v) + 4, fmt(v), 'label', XRTL ? 'start' : 'end'));
       }
+      svg.appendChild(s('rect', { x: x(0), y: P.t, width: x(10) - x(0), height: H - P.t - P.b, fill: css('--ink'), opacity: 0.06 }));
+      svg.appendChild(s('line', { x1: x(10), x2: x(10), y1: P.t, y2: H - P.b, stroke: css('--ink-2'), 'stroke-dasharray': '4 3' }));
+      svg.appendChild(svgText(x(0) + 6, P.t + 12, T.fund, 'label fund-l', 'start'));
       for (var t = 0; t <= N; t += 5) svg.appendChild(svgText(x(t), H - 12, fmt(t), 'label', 'middle'));
       svg.appendChild(svgText(x(N / 2), H, T.years, 'label', 'middle'));
       var d = series(), cross = null;
@@ -237,7 +244,7 @@
       });
       if (cross) svg.appendChild(s('circle', { cx: x(cross), cy: y(d[1][cross]), r: 6, fill: css('--paper'), stroke: css('--ink'), 'stroke-width': 2 }));
       lbl.textContent = fmt(r * 100) + '%';
-      stat.textContent = (cross ? T.breakeven + ' ' + fmt(cross) + '.' : T.never) + ' ' + T.illus;
+      stat.textContent = (cross ? T.breakeven + ' ' + fmt(cross) + '.' : T.never) + ' ' + T.fundNote + ' ' + T.illus;
     }
     range.addEventListener('input', function () { r = parseInt(range.value, 10) / 100; draw(); });
     el.appendChild(h('h3', { text: T.curveTitle })); el.appendChild(svg);
@@ -259,10 +266,22 @@
       if (i === 1) li.appendChild(h('span', { class: 'pipe-branch', text: T.branchNo }));
       list.appendChild(li);
     });
+    var lost = false, cur = 0;
+    var sw = h('button', { type: 'button', class: 'chip', 'aria-pressed': 'false', text: T.pubFirst });
+    sw.addEventListener('click', function () {
+      lost = !lost; sw.setAttribute('aria-pressed', lost ? 'true' : 'false'); sw.textContent = lost ? T.pubOn : T.pubFirst;
+      list.classList.toggle('published-first', lost);
+      btns.forEach(function (b, k) { if (k >= 1 && k <= 5) b.classList.toggle('lost', lost); });
+      show(lost ? 6 : 0);
+    });
     function show(i) {
+      cur = i;
       btns.forEach(function (b, k) { b.setAttribute('aria-pressed', k === i ? 'true' : 'false'); });
-      panel.innerHTML = '<b>' + T.steps[i][0] + '</b><br>' + T.who + ': ' + T.steps[i][1] + '<br>' + T.out + ': ' + T.steps[i][2];
+      panel.innerHTML = lost && (i === 6 || (i >= 1 && i <= 5))
+        ? '<b>' + T.pubOn + '</b><br>' + T.pubLost
+        : '<b>' + T.steps[i][0] + '</b><br>' + T.who + ': ' + T.steps[i][1] + '<br>' + T.out + ': ' + T.steps[i][2];
     }
+    el.appendChild(h('div', { class: 'row', style: 'margin-bottom:10px' }, [sw]));
     el.appendChild(list); el.appendChild(panel); show(0);
   }
 
@@ -350,26 +369,57 @@
     el.appendChild(h('hr', { style: 'border:0;border-top:1px dashed var(--rule);margin:18px 0' }));
     el.appendChild(seg([T.viewR, T.viewM], function (i) { view = i; drawView(); }, 1));
     el.appendChild(vsvg); el.appendChild(vnote);
-    draw(); drawView();
+    // plan your own peak: reorder point = lead-time demand + safety stock
+    el.appendChild(h('hr', { style: 'border:0;border-top:1px dashed var(--rule);margin:18px 0' }));
+    el.appendChild(h('h4', { class: 'sub-h', text: T.planTitle }));
+    function num(label, val, max) {
+      var inp = h('input', { type: 'number', inputmode: 'numeric', min: '1', max: String(max), step: '1', value: String(val) });
+      var lab = h('label', { class: 'field' }, [h('span', { class: 'label', text: label }), inp]);
+      return [lab, inp];
+    }
+    var fD = num(T.daily, 20, 100000), fL = num(T.lead, 14, 365);
+    var pout = h('div', { class: 'panel', 'aria-live': 'polite' });
+    function plan() {
+      var d = Math.max(0, parseFloat(fD[1].value) || 0), L = Math.max(0, parseFloat(fL[1].value) || 0);
+      var exp = Math.round(d * 3.5 * L), safe = Math.round(d * 0.5 * L), rop = exp + safe;
+      var last = d > 0 ? rop / (d * 12) : 0;
+      pout.innerHTML = '';
+      [[T.planExp, exp], [T.planSafe, safe]].forEach(function (r) { pout.appendChild(h('div', { class: 'plan-row' }, [h('span', { text: r[0] }), h('b', { text: fmt(r[1]) + ' ' + T.units2 })])); });
+      pout.appendChild(h('div', { class: 'plan-row total' }, [h('span', { text: T.planRop }), h('b', { text: fmt(rop) + ' ' + T.units2 })]));
+      pout.appendChild(h('p', { class: 'note', text: T.planStory + ' ' + fmt(last, 1) + ' ' + T.days + '.' }));
+    }
+    [fD[1], fL[1]].forEach(function (i) { i.addEventListener('input', plan); });
+    el.appendChild(h('div', { class: 'row fields' }, [fD[0], fL[0]])); el.appendChild(pout);
+    el.appendChild(h('p', { class: 'note', text: T.planNote }));
+    draw(); drawView(); plan();
   }
 
-  /* 6. Ecosystem */
-  function ecosystem(el) {
-    el.appendChild(h('h3', { text: T.ecoTitle }));
+  /* 6. Sponsored-research deal */
+  function deal(el) {
+    el.appendChild(h('h3', { text: T.dealTitle }));
+    var pick = -1, btns = [];
+    var row = h('div', { class: 'row deal-parties', role: 'group' });
+    T.parties.forEach(function (pt, i) {
+      var b = h('button', { type: 'button', class: 'chip', 'aria-pressed': 'false', text: pt[0] });
+      b.addEventListener('click', function () { pick = i; draw(); });
+      btns.push(b); row.appendChild(b);
+    });
+    var flow = h('ol', { class: 'deal-flow' });
+    var steps = T.flow.map(function (f, k) { var li = h('li', {}, [h('span', { class: 'pn', text: fmt(k + 1) }), h('span', { text: f })]); flow.appendChild(li); return li; });
     var panel = h('div', { class: 'panel', 'aria-live': 'polite' });
-    var all = [];
-    function group(title, items) {
-      el.appendChild(h('p', { class: 'label', text: title, style: 'margin:.8em 0 .4em' }));
-      var row = h('div', { class: 'row' });
-      items.forEach(function (it) {
-        var b = h('button', { type: 'button', class: 'chip', 'aria-pressed': 'false', text: it[0] });
-        b.addEventListener('click', function () { all.forEach(function (x) { x.setAttribute('aria-pressed', 'false'); }); b.setAttribute('aria-pressed', 'true'); panel.innerHTML = '<b>' + it[0] + '</b><br>' + it[1]; });
-        all.push(b); row.appendChild(b);
-      });
-      el.appendChild(row);
+    function draw() {
+      btns.forEach(function (b, i) { b.setAttribute('aria-pressed', i === pick ? 'true' : 'false'); });
+      steps.forEach(function (li, k) { li.classList.toggle('on', pick >= 0 && T.flowWho[k].indexOf(pick) >= 0); li.classList.toggle('dim', pick >= 0 && T.flowWho[k].indexOf(pick) < 0); });
+      panel.innerHTML = '';
+      if (pick < 0) { panel.appendChild(h('div', { class: 'note', text: T.dealPick })); return; }
+      var pt = T.parties[pick];
+      panel.appendChild(h('b', { text: pt[0] }));
+      panel.appendChild(h('div', { class: 'deal-io' }, [
+        h('div', {}, [h('span', { class: 'label', text: T.putsIn }), h('p', { text: pt[1] })]),
+        h('div', {}, [h('span', { class: 'label', text: T.getsBack }), h('p', { text: pt[2] })]),
+      ]));
     }
-    group(T.regions, T.reg); group(T.priorities, T.pri);
-    el.appendChild(panel); all[0].click();
+    el.appendChild(row); el.appendChild(flow); el.appendChild(panel); draw();
   }
 
   /* 7. Route chooser */
@@ -475,7 +525,7 @@
   }
 
   var MAP = { 'depth-ladder': depthLadder, 'thermal-feet': thermalFeet, 'patience-curve': patienceCurve, 'pipeline': pipeline,
-    'forecast-playground': forecast, 'ecosystem': ecosystem, 'route-chooser': routeChooser, 'founder-triangle': founderTriangle, 'ai-card': aiCard };
+    'forecast-playground': forecast, 'sponsored-deal': deal, 'route-chooser': routeChooser, 'founder-triangle': founderTriangle, 'ai-card': aiCard };
   function init() {
     document.querySelectorAll('.widget[data-widget]').forEach(function (el) {
       var f = MAP[el.getAttribute('data-widget')];

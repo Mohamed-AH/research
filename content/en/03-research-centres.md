@@ -42,7 +42,7 @@ The trade-off described here is about timing. A product team gets paid next quar
 
 <div class="widget" data-widget="patience-curve"></div>
 
-An illustrative model, not real company data. Move the annual return to see when a research centre overtakes a quick product launch.
+An illustrative model, not real company data. Move the annual return to see when a research centre overtakes a quick product launch, and whether that happens inside a typical venture fund's life.
 
 ## Key terms
 

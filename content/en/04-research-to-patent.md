@@ -36,7 +36,7 @@ The order of steps is the whole point. **File first, publish second.** A patent 
 
 <div class="widget" data-widget="pipeline"></div>
 
-Tap a step to see who is in the room and what they produce.
+Tap a step to see who is in the room and what they produce. Then switch on "What if they publish first?" to see what an early paper costs.
 
 ## Key terms
 

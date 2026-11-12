@@ -387,3 +387,24 @@ body.menu-open { overflow: hidden; }
 html[lang="ar"] em, html[lang="ar"] i { font-style: normal; color: var(--ink-2); font-weight: 600; }
 html[lang="ar"] .kicker, html[lang="ar"] .pager small, html[lang="ar"] .drawer-label, html[lang="ar"] .bn, html[lang="ar"] .toc summary { font-size: .82rem; }
 .table-wrap:focus-visible { outline-offset: 2px; }
+
+/* Try-it additions */
+.widget .fund-l { fill: var(--ink-2); }
+.widget .pipe-step.lost { opacity: .45; text-decoration: line-through; text-decoration-color: var(--coral-text); }
+.widget .published-first .pipe-branch { opacity: .45; }
+.widget h4.sub-h { font-family: var(--f-display); font-weight: 400; font-size: 1.05rem; margin: 0 0 .6em; }
+.widget .fields { gap: 14px; align-items: flex-end; }
+.widget .field { display: grid; gap: 4px; flex: 1 1 180px; }
+.widget .field input { font: inherit; font-family: var(--f-mono); font-size: 1rem; padding: 8px 10px; border-radius: 8px; border: 1px solid var(--rule); background: var(--card); color: var(--ink); width: 100%; box-sizing: border-box; }
+.widget .plan-row { display: flex; justify-content: space-between; gap: 12px; padding: 4px 0; border-bottom: 1px dashed var(--rule); }
+.widget .plan-row b { white-space: nowrap; font-family: var(--f-mono); }
+.widget .plan-row.total { border-bottom: 0; font-weight: 600; }
+.widget .plan-row.total b { color: var(--signal-text); }
+.widget .deal-flow { list-style: none; margin: 14px 0 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+.widget .deal-flow li { position: relative; padding: 10px; border: 1px solid var(--rule); border-radius: 10px; font-size: .9rem; line-height: 1.4; transition: opacity .25s, border-color .25s; }
+.widget .deal-flow li .pn { display: block; font-family: var(--f-mono); font-size: .75rem; color: var(--signal-text); margin-bottom: 4px; }
+.widget .deal-flow li.on { border-color: var(--signal-text); }
+.widget .deal-flow li.dim { opacity: .45; }
+.widget .deal-io { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 6px; }
+.widget .deal-io p { margin: 2px 0 0; }
+@media (max-width: 560px) { .widget .deal-flow { grid-template-columns: 1fr 1fr; } .widget .deal-io { grid-template-columns: 1fr; } }
