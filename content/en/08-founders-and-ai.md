@@ -7,9 +7,9 @@ starts: "1:06:37"
 
 # 8. Founders, teams and AI
 
-> "Money isn't the problem. The question is: will this product sell? Who is your customer? Have you talked to them?" Salman Butt, [1:07:02](https://www.youtube.com/watch?v=0t0UiPQnskk&t=4022s)
+> "Money isn't the problem. The question is: will this product sell? Who is your customer? Have you talked to them?" [1:07:02](https://www.youtube.com/watch?v=0t0UiPQnskk&t=4022s)
 
-## What Salman says
+## From the episode
 
 ### Are you fit to be a founder? ([1:06:37](https://www.youtube.com/watch?v=0t0UiPQnskk&t=3997s))
 
@@ -26,11 +26,11 @@ starts: "1:06:37"
 
 ## The idea, explained
 
-**Founder fit.** The persona idea Salman uses is a variant of the well-known *Hacker, Hustler, Hipster* (builder, seller, designer) shorthand from startup culture. The strongest academic study we found used personality data from about 25,000 to 33,000 founders. It found that firms with three or more founders were more than twice as likely to succeed as solo founders, and that personality-diverse teams did better. Its six types are named differently from Salman's three, but the message is the same: the mix of people matters ([McCarthy et al., 2023](https://arxiv.org/abs/2302.07968)).
+**Founder fit.** The persona idea used in the episode is a variant of the well-known *Hacker, Hustler, Hipster* (builder, seller, designer) shorthand from startup culture. The strongest academic study we found used personality data from about 25,000 to 33,000 founders. It found that firms with three or more founders were more than twice as likely to succeed as solo founders, and that personality-diverse teams did better. Its six types are named differently from the episode's three, but the message is the same: the mix of people matters ([McCarthy et al., 2023](https://arxiv.org/abs/2302.07968)).
 
 **Psychometrics** measures traits through structured questionnaires. Big Five personality tests are the most widely used in research. They are tools for conversation and team design, not verdicts.
 
-**AI and research, as of late 2026.** Recent events show both sides of Salman's point. In September 2026 OpenAI announced that its AI agents, running about 10,000 at a time, had resolved a version of the Navier–Stokes problem, a famous open question in fluid dynamics. The proof was confirmed by the Lean proof checker, though human review was still under way ([Science News](https://www.sciencenews.org/article/ai-math-puzzle-navier-stokes-openai)). The work built on human mathematicians' progress on a closely related problem. The lesson matches his: AI is becoming a powerful research tool, while choosing the problem, designing the instrument and owning the result stay human.
+**AI and research, as of late 2026.** Recent events show both sides of this point. In September 2026 OpenAI announced that its AI agents, running about 10,000 at a time, had resolved a version of the Navier–Stokes problem, a famous open question in fluid dynamics. The proof was confirmed by the Lean proof checker, though human review was still under way ([Science News](https://www.sciencenews.org/article/ai-math-puzzle-navier-stokes-openai)). The work built on human mathematicians' progress on a closely related problem. The lesson matches the episode: AI is becoming a powerful research tool, while choosing the problem, designing the instrument and owning the result stay human.
 
 ## Try it
 

@@ -7,9 +7,9 @@ starts: "1:34"
 
 # 1. What technology and deep tech mean
 
-> "Technology is connected tools that accomplish a task." Salman Butt, [6:03](https://www.youtube.com/watch?v=0t0UiPQnskk&t=363s)
+> "Technology is connected tools that accomplish a task." [6:03](https://www.youtube.com/watch?v=0t0UiPQnskk&t=363s)
 
-## What Salman says
+## From the episode
 
 - **Technology is wider than IT** ([4:05](https://www.youtube.com/watch?v=0t0UiPQnskk&t=245s)). When people say "tech" they usually mean computers, but microphones, lighting, cameras, cars, planes and lab analysers are all technology. His simplest picture is meshed gears: turn one and the others move ([6:11](https://www.youtube.com/watch?v=0t0UiPQnskk&t=371s)).
 - **Arab roots** ([7:24](https://www.youtube.com/watch?v=0t0UiPQnskk&t=444s)). The word *algorithm* comes from the mathematician al-Khwarizmi. Many surgical instruments trace back to early Arab and Muslim medicine ([7:52](https://www.youtube.com/watch?v=0t0UiPQnskk&t=472s)). Arabic even has a word pattern for instruments, *ism al-āla* (اسم الآلة) ([8:46](https://www.youtube.com/watch?v=0t0UiPQnskk&t=526s)).
@@ -17,10 +17,10 @@ starts: "1:34"
 
 ## The idea, explained
 
-There is no single official definition of deep tech, but most investors use a version of Salman's. A deep-tech product rests on a scientific or engineering advance, not only on a new business model. Three features usually follow from that:
+There is no single official definition of deep tech, but most investors use a version of the one given here. A deep-tech product rests on a scientific or engineering advance, not only on a new business model. Three features usually follow from that:
 
 1. **It starts in research.** The core idea comes out of a lab, a paper or a patent, not a pitch deck.
-2. **It takes long and costs much.** Years of development pass before the first sale, so it needs patient money. Salman returns to this in [chapter 3](03-research-centres.md).
+2. **It takes long and costs much.** Years of development pass before the first sale, so it needs patient money. The episode returns to this in [chapter 3](03-research-centres.md).
 3. **It is hard to copy.** The knowledge, the data and the patents form a barrier, or "moat", around the business.
 
 A useful test: *could a good software team rebuild this in six months from the public description?* If yes, it is probably not deep tech.

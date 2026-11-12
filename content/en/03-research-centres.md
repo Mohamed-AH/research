@@ -7,9 +7,9 @@ starts: "18:31"
 
 # 3. Why companies build research centres
 
-> "I want to build a company to last in the market. To last, I need knowledge assets." Salman Butt, [22:17](https://www.youtube.com/watch?v=0t0UiPQnskk&t=1337s)
+> "I want to build a company to last in the market. To last, I need knowledge assets." [22:17](https://www.youtube.com/watch?v=0t0UiPQnskk&t=1337s)
 
-## What Salman says
+## From the episode
 
 - **His own path** ([19:22](https://www.youtube.com/watch?v=0t0UiPQnskk&t=1162s)). He published papers after his master's, around 2009 to 2011. A conference then rejected one of his proposals for being "too practical, more of a project than research". That pushed him into building companies for a while.
 - **Salla's research centre** ([20:26](https://www.youtube.com/watch?v=0t0UiPQnskk&t=1226s)). In 2022 Salla founded a research and innovation centre, which later spun out as KnowledgeX.
@@ -30,11 +30,11 @@ A company has two kinds of value. One is what it *sells today*. The other is wha
 | Trade secret | Know-how you never publish | As long as it stays secret |
 | Data and models | Advantage from what only you can measure | As long as you keep collecting |
 
-The trade-off Salman describes is about timing. A product team gets paid next quarter, while a research team pays off in years. That is why research often loses budget fights in startups, and why the companies that keep funding it tend to be the ones that last.
+The trade-off described here is about timing. A product team gets paid next quarter, while a research team pays off in years. That is why research often loses budget fights in startups, and why the companies that keep funding it tend to be the ones that last.
 
 ## Context and evidence
 
-- **E-commerce companies that publish.** Salman's story is not unusual in Germany. Zalando, the country's largest fashion marketplace, has a science group that publishes on forecasting and replenishment. In 2025 it published a paper in *Scientific Reports* on a replenishment engine tested on about 2 million articles from about 800 merchants ([Zalando Engineering](https://engineering.zalando.com/posts/2026/01/publication-replenishment-engine.html)).
+- **E-commerce companies that publish.** The German story is not unusual. Zalando, the country's largest fashion marketplace, has a science group that publishes on forecasting and replenishment. In 2025 it published a paper in *Scientific Reports* on a replenishment engine tested on about 2 million articles from about 800 merchants ([Zalando Engineering](https://engineering.zalando.com/posts/2026/01/publication-replenishment-engine.html)).
 - **Bottle caps.** Under EU Directive 2019/904, single-use plastic drink containers must keep their caps attached from 3 July 2024, because caps are among the items most often found on EU beaches ([IFLScience](https://www.iflscience.com/plastic-bottle-caps-across-europe-are-changing-but-why-74393)).
 
 ## Try it

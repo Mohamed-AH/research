@@ -7,9 +7,9 @@ starts: "11:53"
 
 # 2. Deep tech in practice: reading heat
 
-> "We combined more than one technology, and more than one depth in technology, to create this solution." Salman Butt, [16:26](https://www.youtube.com/watch?v=0t0UiPQnskk&t=986s)
+> "We combined more than one technology, and more than one depth in technology, to create this solution." [16:26](https://www.youtube.com/watch?v=0t0UiPQnskk&t=986s)
 
-## What Salman says
+## From the episode
 
 - **The startup** ([12:28](https://www.youtube.com/watch?v=0t0UiPQnskk&t=748s)). He describes a Saudi company he invested in that has won international medical awards. He does not name it on air.
 - **The science** ([12:51](https://www.youtube.com/watch?v=0t0UiPQnskk&t=771s)). It builds on medical thermography, the study of body temperature. The literature says that a temperature difference between the capillaries of the left and right soles can be an early sign of diabetes complications ([13:57](https://www.youtube.com/watch?v=0t0UiPQnskk&t=837s)). Diabetic foot is costly and hard to treat once it develops ([14:25](https://www.youtube.com/watch?v=0t0UiPQnskk&t=865s)).

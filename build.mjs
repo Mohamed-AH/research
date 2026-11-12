@@ -11,7 +11,7 @@ const VIDEO = 'https://www.youtube.com/watch?v=0t0UiPQnskk';
 
 const UI = {
   en: {
-    dir: 'ltr', site: 'Claiming Ideas', tagline: 'A companion to the conversation with Salman Butt',
+    dir: 'ltr', site: 'Claiming Ideas', tagline: 'A study companion to a conversation on research and business value',
     chapter: 'Chapter', chapters: 'Chapters', inVideo: 'In the video', watchFrom: 'Watch from',
     watch: 'Watch the episode', prev: 'Previous', next: 'Next', home: 'Home', glossary: 'Glossary',
     sources: 'Sources and About', other: 'العربية', otherLang: 'ar', theme: 'Switch light or dark theme',
@@ -19,7 +19,7 @@ const UI = {
     menu: 'Menu', skip: 'Skip to content', fig: 'Fig.',
   },
   ar: {
-    dir: 'rtl', site: 'حجز خانات فكرية', tagline: 'رفيق لحوار سلمان بت',
+    dir: 'rtl', site: 'حجز خانات فكرية', tagline: 'رفيق دراسي لحوار عن البحث العلمي والقيمة التجارية',
     chapter: 'الفصل', chapters: 'الفصول', inVideo: 'في الحلقة', watchFrom: 'شاهد من',
     watch: 'شاهد الحلقة', prev: 'السابق', next: 'التالي', home: 'الرئيسية', glossary: 'المسرد',
     sources: 'المصادر وعن الموقع', other: 'English', otherLang: 'en', theme: 'تبديل الوضع الفاتح أو الداكن',

@@ -7,9 +7,9 @@ starts: "45:59"
 
 # 6. Sponsored research and the Saudi ecosystem
 
-> "Why don't we have a private sector that pumps money into universities and tells a specialist professor: point your research in this direction?" Salman Butt, [48:10](https://www.youtube.com/watch?v=0t0UiPQnskk&t=2890s)
+> "Why don't we have a private sector that pumps money into universities and tells a specialist professor: point your research in this direction?" [48:10](https://www.youtube.com/watch?v=0t0UiPQnskk&t=2890s)
 
-## What Salman says
+## From the episode
 
 - **The Liverpool moment** ([46:28](https://www.youtube.com/watch?v=0t0UiPQnskk&t=2788s)). He paid his own master's fees at Liverpool. The classmate beside him, in the same lectures, was *being paid*. The difference was **sponsored research**: a company was funding his work ([47:03](https://www.youtube.com/watch?v=0t0UiPQnskk&t=2823s)).
 - **Why a company pays** ([47:23](https://www.youtube.com/watch?v=0t0UiPQnskk&t=2843s)). The company backs a leading professor on a problem it expects to face in two or three years. It then owns the papers and any patents, and can "own the market" when the problem arrives ([47:54](https://www.youtube.com/watch?v=0t0UiPQnskk&t=2874s)).
@@ -36,7 +36,7 @@ Why it matters for an economy:
 
 ## Side note: how people work in research
 
-Salman's stories show that "researcher" is not one job. Common roles in industry research:
+The stories in the episode show that "researcher" is not one job. Common roles in industry research:
 
 | Role | Typical background | What they do |
 | --- | --- | --- |
