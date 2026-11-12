@@ -34,7 +34,7 @@ The trade-off described here is about timing. A product team gets paid next quar
 
 ## Context and evidence
 
-- **E-commerce companies that publish.** The German story is not unusual. Zalando, the country's largest fashion marketplace, has a science group that publishes on forecasting and replenishment. In 2025 it published a paper in *Scientific Reports* on a replenishment engine tested on about 2 million articles from about 800 merchants ([Zalando Engineering](https://engineering.zalando.com/posts/2026/01/publication-replenishment-engine.html)).
+- **E-commerce companies that publish.** Stories like this are common in Germany. Zalando, the country's largest fashion marketplace, has a science group that publishes on forecasting and replenishment. In 2025 it published a paper in *Scientific Reports* on a replenishment engine tested on about 2 million articles from about 800 merchants ([Zalando Engineering](https://engineering.zalando.com/posts/2026/01/publication-replenishment-engine.html)).
 - **Bottle caps.** Under EU Directive 2019/904, single-use plastic drink containers must keep their caps attached from 3 July 2024, because caps are among the items most often found on EU beaches ([IFLScience](https://www.iflscience.com/plastic-bottle-caps-across-europe-are-changing-but-why-74393)).
 
 ## Try it

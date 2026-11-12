@@ -40,6 +40,7 @@ function renderMarkdown(md) {
   // video timestamp links become orange chips that open in a new tab
   html = html.replace(/<a href="(https:\/\/www\.youtube\.com\/watch\?v=0t0UiPQnskk(?:&amp;|&)t=\d+s)">([^<]+)<\/a>/g,
     (_, href, text) => `<a class="ts" href="${href}" target="_blank" rel="noopener"><span aria-hidden="true">▶</span>${text}</a>`);
+  html = html.replace(/\((<a class="ts"[^>]*>.*?<\/a>)\)/g, (_, a) => `<span class="tsw">(${a})</span>`);
   // other external links open in a new tab
   html = html.replace(/<a href="(https?:\/\/[^"]+)">/g, '<a href="$1" target="_blank" rel="noopener">');
   // tables scroll sideways on phones

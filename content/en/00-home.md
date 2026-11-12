@@ -1,7 +1,7 @@
 ---
 title: "Claiming Ideas"
 kicker: "A study companion · 8 chapters · English and Arabic"
-subtitle: "A study companion to a conversation on how research becomes business value"
+subtitle: "What one conversation teaches about turning research into business value"
 video: "https://www.youtube.com/watch?v=0t0UiPQnskk"
 length: "1:15:47"
 ---
