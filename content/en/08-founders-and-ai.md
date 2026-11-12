@@ -1,4 +1,5 @@
 ---
+description: "The founder triangle of engineer, hustler and artist, and what AI changes for the people who build companies."
 chapter: 8
 title: "Founders, teams and AI"
 video_chapters: [15, 16, 17]

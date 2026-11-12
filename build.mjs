@@ -8,6 +8,17 @@ const ROOT = path.dirname(new URL(import.meta.url).pathname);
 const OUT = path.join(ROOT, 'dist');
 const LANGS = ['en', 'ar'];
 const VIDEO = 'https://www.youtube.com/watch?v=0t0UiPQnskk';
+const SITE = 'https://claiming-ideas.pages.dev';
+const urlFor = (lang, slug) => `${SITE}/${lang}/${slug === '00-home' ? '' : slug}`; // Cloudflare Pages serves pages without .html
+
+// a short plain-text summary for search results and link previews
+function summarise(html) {
+  const m = html.replace(/<blockquote>[\s\S]*?<\/blockquote>/g, '').match(/<p>([\s\S]*?)<\/p>/);
+  if (!m) return '';
+  let t = m[1].replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/\s+/g, ' ').trim();
+  if (t.length > 160) t = t.slice(0, 157).replace(/[\s,،.؛:]+[^\s]*$/, '') + '…';
+  return t;
+}
 
 const UI = {
   en: {
@@ -16,7 +27,7 @@ const UI = {
     watch: 'Watch the episode', prev: 'Previous', next: 'Next', home: 'Home', glossary: 'Glossary',
     sources: 'Sources and About', other: 'العربية', otherLang: 'ar', theme: 'Switch light or dark theme',
     footer: 'An independent study aid. Not affiliated with Salla, KnowledgeX or the podcast.',
-    menu: 'Menu', close: 'Close menu', skip: 'Skip to content', fig: 'Fig.', mainNav: 'Page navigation',
+    menu: 'Menu', close: 'Close menu', skip: 'Skip to content', fig: 'Fig.', mainNav: 'Page navigation', topNav: 'Site menu',
   },
   ar: {
     dir: 'rtl', site: 'حجز خانات فكرية', tagline: 'رفيق دراسي لحوار عن البحث العلمي والقيمة التجارية',
@@ -24,7 +35,7 @@ const UI = {
     watch: 'شاهد الحلقة', prev: 'السابق', next: 'التالي', home: 'الرئيسية', glossary: 'المسرد',
     sources: 'المصادر وعن الموقع', other: 'English', otherLang: 'en', theme: 'تبديل الوضع الفاتح أو الداكن',
     footer: 'دليل دراسي مستقل، لا يتبع سلة ولا نولج إكس ولا البودكاست.',
-    menu: 'القائمة', close: 'إغلاق القائمة', skip: 'تخطَّ إلى المحتوى', fig: 'شكل', mainNav: 'التنقل بين الصفحات',
+    menu: 'القائمة', close: 'إغلاق القائمة', skip: 'تخطَّ إلى المحتوى', fig: 'شكل', mainNav: 'التنقل بين الصفحات', topNav: 'قائمة الموقع',
   },
 };
 
@@ -33,7 +44,7 @@ const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replac
 function slugFor(file) { return file.replace(/\.md$/, ''); }
 function hrefFor(slug) { return slug === '00-home' ? 'index.html' : `${slug}.html`; }
 
-function renderMarkdown(md) {
+function renderMarkdown(md, lang = 'en') {
   let html = marked.parse(md, { gfm: true });
   // internal links: foo.md -> foo.html, 00-home.md -> index.html
   html = html.replace(/href="([0-9a-z-]+)\.md"/g, (_, s) => `href="${hrefFor(s)}"`);
@@ -44,7 +55,7 @@ function renderMarkdown(md) {
   // other external links open in a new tab
   html = html.replace(/<a href="(https?:\/\/[^"]+)">/g, '<a href="$1" target="_blank" rel="noopener">');
   // tables scroll sideways on phones
-  html = html.replace(/<table>/g, '<div class="table-wrap"><table>').replace(/<\/table>/g, '</table></div>');
+  html = html.replace(/<table>/g, '<div class="table-wrap" tabindex="0" role="region" aria-label="' + (lang === 'ar' ? 'جدول' : 'Table') + '"><table>').replace(/<\/table>/g, '</table></div>');
   return html;
 }
 
@@ -131,7 +142,7 @@ function bottomNav(lang, pages, current) {
 </nav>`;
 }
 
-function layout({ lang, title, body, slug, pages, bodyClass = '' }) {
+function layout({ lang, title, body, slug, pages, description, bodyClass = '' }) {
   const u = UI[lang];
   const otherExists = fs.existsSync(path.join(ROOT, 'content', u.otherLang, `${slug}.md`));
   const otherHref = otherExists ? `../${u.otherLang}/${hrefFor(slug)}` : `../${u.otherLang}/index.html`;
@@ -142,21 +153,35 @@ function layout({ lang, title, body, slug, pages, bodyClass = '' }) {
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(fullTitle)}</title>
-<meta name="description" content="${esc(u.tagline)}">
+<meta name="description" content="${esc(description || u.tagline)}">
 <meta name="theme-color" content="#12343b">
+<link rel="canonical" href="${urlFor(lang, slug)}">
+<link rel="alternate" hreflang="${lang}" href="${urlFor(lang, slug)}">
+${otherExists ? `<link rel="alternate" hreflang="${u.otherLang}" href="${urlFor(u.otherLang, slug)}">` : ''}
+<link rel="alternate" hreflang="x-default" href="${SITE}/">
+<meta property="og:type" content="${slug === '00-home' ? 'website' : 'article'}">
+<meta property="og:site_name" content="${esc(u.site)}">
+<meta property="og:title" content="${esc(slug === '00-home' ? u.site : title)}">
+<meta property="og:description" content="${esc(description || u.tagline)}">
+<meta property="og:url" content="${urlFor(lang, slug)}">
+<meta property="og:locale" content="${lang === 'ar' ? 'ar_SA' : 'en_GB'}">
+<meta property="og:locale:alternate" content="${lang === 'ar' ? 'en_GB' : 'ar_SA'}">
+<meta property="og:image" content="${SITE}/assets/og-${lang}.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="${esc(u.site)}: ${esc(u.tagline)}">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
-<link rel="alternate" hreflang="${u.otherLang}" href="${otherHref}">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&family=Martian+Mono:wght@400;600&family=Reem+Kufi:wght@500;700&family=Noto+Naskh+Arabic:wght@400;600&display=swap" rel="stylesheet">
+<link rel="preload" href="../assets/fonts/${lang === 'ar' ? 'noto-naskh-arabic-arabic-400' : 'literata-latin-400'}.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/fonts.css">
 <link rel="stylesheet" href="../assets/style.css">
-<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+<script src="../assets/theme.js"></script>
 </head>
 <body class="${bodyClass}">
 <a class="skip" href="#main">${u.skip}</a>
 <header class="bar">
   <a class="brand" href="index.html"><span class="mark" aria-hidden="true"></span><span>${esc(u.site)}</span></a>
-  <nav class="bar-nav">
+  <nav class="bar-nav" aria-label="${u.topNav}">
     <a class="home-link${slug === '00-home' ? ' is-here' : ''}" href="index.html"${slug === '00-home' ? ' aria-current="page"' : ''}>${ICON.home}<span>${u.home}</span></a>
     ${nav(lang, pages, slug)}
     <a class="lang" href="${otherHref}" hreflang="${u.otherLang}" lang="${u.otherLang}">${u.other}</a>
@@ -200,7 +225,7 @@ function buildLang(lang) {
   const chapters = pages.filter((p) => p.data.chapter);
 
   for (const p of pages) {
-    let html = renderMarkdown(p.content);
+    let html = renderMarkdown(p.content, lang);
     let body;
     if (p.slug === '00-home') {
       html = html.replace(/<h1>.*?<\/h1>/s, '');
@@ -246,7 +271,9 @@ function buildLang(lang) {
       body = `<section class="chapter-head plain"><div class="lattice" aria-hidden="true"></div></section><article class="prose reveal">${html}</article>`;
     }
     const title = p.data.title || '';
-    fs.writeFileSync(path.join(outDir, hrefFor(p.slug)), layout({ lang, title, body, slug: p.slug, pages, bodyClass: p.slug === '00-home' ? 'is-home' : '' }));
+    const description = p.data.description || summarise(html);
+    allUrls.push({ lang, slug: p.slug });
+    fs.writeFileSync(path.join(outDir, hrefFor(p.slug)), layout({ lang, title, body, slug: p.slug, pages, description, bodyClass: p.slug === '00-home' ? 'is-home' : '' }));
   }
 }
 
@@ -261,5 +288,19 @@ function copyDir(src, dst) {
 fs.rmSync(OUT, { recursive: true, force: true });
 fs.mkdirSync(OUT, { recursive: true });
 copyDir(path.join(ROOT, 'site'), OUT);
+const allUrls = [];
 for (const lang of LANGS) buildLang(lang);
+// sitemap with language alternates, and robots.txt pointing to it
+const today = new Date().toISOString().slice(0, 10);
+const bySlug = {};
+for (const { lang, slug } of allUrls) (bySlug[slug] ||= []).push(lang);
+const entries = allUrls.map(({ lang, slug }) => `  <url><loc>${urlFor(lang, slug)}</loc><lastmod>${today}</lastmod>
+${bySlug[slug].map((l) => `    <xhtml:link rel="alternate" hreflang="${l}" href="${urlFor(l, slug)}"/>`).join('\n')}
+  </url>`);
+fs.writeFileSync(path.join(OUT, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+${entries.join('\n')}
+</urlset>
+`);
+fs.writeFileSync(path.join(OUT, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${SITE}/sitemap.xml\n`);
 console.log('Built to', OUT);

@@ -1,4 +1,5 @@
 ---
+description: "Why counting patents misses the point, and how licensing, spin-outs and products turn a patent into value."
 chapter: 7
 title: "Patents as assets: three routes to money"
 video_chapters: [13, 14]

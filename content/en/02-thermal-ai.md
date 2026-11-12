@@ -1,4 +1,5 @@
 ---
+description: "How medical thermography, cheap thermal cameras and AI combine into a deep-tech product, with a simple tool to try."
 chapter: 2
 title: "Deep tech in practice: reading heat"
 video_chapters: [5]
@@ -12,7 +13,7 @@ starts: "11:53"
 ## From the episode
 
 - **The startup** ([12:28](https://www.youtube.com/watch?v=0t0UiPQnskk&t=748s)). He describes a Saudi company he invested in that has won international medical awards. He does not name it on air.
-- **The science** ([12:51](https://www.youtube.com/watch?v=0t0UiPQnskk&t=771s)). It builds on medical thermography, the study of body temperature. The literature says that a temperature difference between the capillaries of the left and right soles can be an early sign of diabetes complications ([13:57](https://www.youtube.com/watch?v=0t0UiPQnskk&t=837s)). Diabetic foot is costly and hard to treat once it develops ([14:25](https://www.youtube.com/watch?v=0t0UiPQnskk&t=865s)).
+- **The science** ([12:51](https://www.youtube.com/watch?v=0t0UiPQnskk&t=771s)). It builds on medical thermography, imaging the body's heat. The literature says that a temperature difference between the capillaries of the left and right soles can be an early sign of diabetes complications ([13:57](https://www.youtube.com/watch?v=0t0UiPQnskk&t=837s)). Diabetic foot is costly and hard to treat once it develops ([14:25](https://www.youtube.com/watch?v=0t0UiPQnskk&t=865s)).
 - **The trick** ([14:41](https://www.youtube.com/watch?v=0t0UiPQnskk&t=881s)). Detecting this used to need complex, expensive equipment. Now a small thermal camera attached to a phone takes the image, and AI reads differences the human eye cannot see.
 - **The mirror** ([16:35](https://www.youtube.com/watch?v=0t0UiPQnskk&t=995s)). The same team built a mirror that players stand in front of before a match. It reads the heat of peripheral blood vessels and flags muscles at risk of strain. He says it was used during the FIFA World Cup.
 

@@ -1,4 +1,5 @@
 ---
+description: "Why a company would run a research centre, how papers and patents claim ideas, and when research overtakes the product."
 chapter: 3
 title: "Why companies build research centres"
 video_chapters: [6, 7, 10]
@@ -16,7 +17,7 @@ starts: "18:31"
 - **Why the board hesitated** ([20:41](https://www.youtube.com/watch?v=0t0UiPQnskk&t=1241s)). Venture investors measure returns as multiples on their investment. A research centre needs 7 to 8 years of steady spending before it pays back, at an annual return he puts at 15% to 30% ([21:04](https://www.youtube.com/watch?v=0t0UiPQnskk&t=1264s)). The board saw that as too early for a startup.
 - **Why companies do it anyway** ([22:17](https://www.youtube.com/watch?v=0t0UiPQnskk&t=1337s)). Any product can be copied, even by your own customers while they use it. A product built on patents cannot be copied without legal risk ([23:00](https://www.youtube.com/watch?v=0t0UiPQnskk&t=1380s)). That, he says, is what makes Silicon Valley companies last.
 - **The German story** ([23:39](https://www.youtube.com/watch?v=0t0UiPQnskk&t=1419s)). He met a researcher from a large German-language e-commerce marketplace. The researcher's job was publishing papers, for example on reordering warehouse stock by season so that in-season products sit at the front ([25:19](https://www.youtube.com/watch?v=0t0UiPQnskk&t=1519s)). The research department alone had about 1,800 people, he says ([26:08](https://www.youtube.com/watch?v=0t0UiPQnskk&t=1568s)).
-- **"Reserve intellectual space"** ([27:22](https://www.youtube.com/watch?v=0t0UiPQnskk&t=1642s)). A company that wants to lead a sector stakes its claim through published papers, filed patents and licensed patents. These are knowledge assets even if they do not show up in a product straight away.
+- **"Claiming ideas"** ([27:22](https://www.youtube.com/watch?v=0t0UiPQnskk&t=1642s)). A company that wants to lead a sector claims its intellectual ground through published papers, filed patents and licensed patents. These are knowledge assets even if they do not show up in a product straight away.
 - **Research is everywhere** ([41:43](https://www.youtube.com/watch?v=0t0UiPQnskk&t=2503s)). Everyday rules come from studies: EU bottle caps that stay attached ([42:55](https://www.youtube.com/watch?v=0t0UiPQnskk&t=2575s)), local slaughter policy in Finland ([43:48](https://www.youtube.com/watch?v=0t0UiPQnskk&t=2628s)), and bidet sprays in Finnish hotels ([45:01](https://www.youtube.com/watch?v=0t0UiPQnskk&t=2701s)). Inside companies too, people click "OK" on the same error for years instead of asking why it happens ([42:14](https://www.youtube.com/watch?v=0t0UiPQnskk&t=2534s)).
 
 ## The idea, explained
@@ -41,7 +42,7 @@ The trade-off described here is about timing. A product team gets paid next quar
 
 <div class="widget" data-widget="patience-curve"></div>
 
-An illustrative model, not real company data. Move the annual return to see when a research centre overtakes a quick product launch.
+An illustrative model, not real company data. Move the annual return to see when a research centre overtakes a quick product launch, and whether that happens inside a typical venture fund's life.
 
 ## Key terms
 

@@ -22,3 +22,6 @@ Hosted on Cloudflare Pages, which rebuilds on every push to `main`.
 - Build command: `npm run build`
 - Output folder: `dist`
 - Framework preset: None
+- Node version: pinned in `.nvmrc`
+- Security and cache headers live in `site/_headers`. The Content-Security-Policy allows Cloudflare Web Analytics (`static.cloudflareinsights.com`, `cloudflareinsights.com`); add any new outside script or font host there first.
+- Fonts are self-hosted in `site/assets/fonts` (Latin, Latin Extended and Arabic subsets), so pages make no requests to Google.

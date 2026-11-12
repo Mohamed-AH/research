@@ -1,4 +1,5 @@
 ---
+description: "What makes a product deep tech, why it takes years and real money, and where the word algorithm comes from."
 chapter: 1
 title: "What technology and deep tech mean"
 video_chapters: [2, 3, 4]
@@ -20,7 +21,7 @@ starts: "1:34"
 There is no single official definition of deep tech, but most investors use a version of the one given here. A deep-tech product rests on a scientific or engineering advance, not only on a new business model. Three features usually follow from that:
 
 1. **It starts in research.** The core idea comes out of a lab, a paper or a patent, not a pitch deck.
-2. **It takes long and costs much.** Years of development pass before the first sale, so it needs patient money. The episode returns to this in [chapter 3](03-research-centres.md).
+2. **It takes years and a lot of money.** Years of development pass before the first sale, so it needs patient money. The episode returns to this in [chapter 3](03-research-centres.md).
 3. **It is hard to copy.** The knowledge, the data and the patents form a barrier, or "moat", around the business.
 
 A useful test: *could a good software team rebuild this in six months from the public description?* If yes, it is probably not deep tech.

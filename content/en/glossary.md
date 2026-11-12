@@ -1,4 +1,5 @@
 ---
+description: "Key terms from the episode in English and Arabic, from prior art and spin-outs to safety stock and TRL."
 title: "Glossary"
 ---
 

@@ -1,4 +1,5 @@
 ---
+description: "The path from research to patent: why you file before you publish, what prior art is, and when to keep a trade secret."
 chapter: 4
 title: "From research to patent"
 video_chapters: [8]
@@ -35,7 +36,7 @@ The order of steps is the whole point. **File first, publish second.** A patent 
 
 <div class="widget" data-widget="pipeline"></div>
 
-Tap a step to see who is in the room and what they produce.
+Tap a step to see who is in the room and what they produce. Then switch on "What if they publish first?" to see what an early paper costs.
 
 ## Key terms
 
