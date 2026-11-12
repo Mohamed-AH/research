@@ -16,7 +16,7 @@ const UI = {
     watch: 'Watch the episode', prev: 'Previous', next: 'Next', home: 'Home', glossary: 'Glossary',
     sources: 'Sources and About', other: 'العربية', otherLang: 'ar', theme: 'Switch light or dark theme',
     footer: 'An independent study aid. Not affiliated with Salla, KnowledgeX or the podcast.',
-    menu: 'Menu', skip: 'Skip to content', fig: 'Fig.',
+    menu: 'Menu', close: 'Close menu', skip: 'Skip to content', fig: 'Fig.', mainNav: 'Page navigation',
   },
   ar: {
     dir: 'rtl', site: 'حجز خانات فكرية', tagline: 'رفيق دراسي لحوار عن البحث العلمي والقيمة التجارية',
@@ -24,7 +24,7 @@ const UI = {
     watch: 'شاهد الحلقة', prev: 'السابق', next: 'التالي', home: 'الرئيسية', glossary: 'المسرد',
     sources: 'المصادر وعن الموقع', other: 'English', otherLang: 'en', theme: 'تبديل الوضع الفاتح أو الداكن',
     footer: 'دليل دراسي مستقل، لا يتبع سلة ولا نولج إكس ولا البودكاست.',
-    menu: 'القائمة', skip: 'تخطَّ إلى المحتوى', fig: 'شكل',
+    menu: 'القائمة', close: 'إغلاق القائمة', skip: 'تخطَّ إلى المحتوى', fig: 'شكل', mainNav: 'التنقل بين الصفحات',
   },
 };
 
@@ -75,6 +75,62 @@ function nav(lang, pages, current) {
   return `<details class="toc"><summary>${u.chapters}</summary><ol>${items}${extra}</ol></details>`;
 }
 
+const ICON = {
+  home: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11 12 4l9 7"/><path d="M5.5 9.5V20h13V9.5"/><path d="M10 20v-5h4v5"/></svg>',
+  prev: '<svg class="dir" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5 8 12l7 7"/></svg>',
+  next: '<svg class="dir" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg>',
+  menu: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>',
+  close: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>',
+};
+
+function sequence(pages) {
+  const chapters = pages.filter((p) => p.data.chapter).sort((a, b) => a.data.chapter - b.data.chapter);
+  return ['00-home', ...chapters.map((p) => p.slug), 'glossary', 'sources'].filter((s) => pages.some((p) => p.slug === s));
+}
+
+function drawer(lang, pages, current, otherHref) {
+  const u = UI[lang];
+  const chapters = pages.filter((p) => p.data.chapter).sort((a, b) => a.data.chapter - b.data.chapter);
+  const cur = (s) => (s === current ? ' aria-current="page"' : '');
+  const items = chapters.map((p) => `<li><a href="${hrefFor(p.slug)}"${cur(p.slug)}><span class="n">${String(p.data.chapter).padStart(2, '0')}</span>${esc(p.data.title)}</a></li>`).join('');
+  return `<dialog class="drawer" aria-label="${u.menu}">
+  <div class="drawer-head">
+    <span class="drawer-title">${esc(u.site)}</span>
+    <button class="icon-btn drawer-close" type="button" aria-label="${u.close}">${ICON.close}</button>
+  </div>
+  <nav>
+    <a class="drawer-home" href="index.html"${cur('00-home')}>${ICON.home}<span>${u.home}</span></a>
+    <p class="drawer-label">${u.chapters}</p>
+    <ol>${items}</ol>
+    <ul class="drawer-extra">
+      <li><a href="glossary.html"${cur('glossary')}>${u.glossary}</a></li>
+      <li><a href="sources.html"${cur('sources')}>${u.sources}</a></li>
+    </ul>
+  </nav>
+  <div class="drawer-foot">
+    <a class="lang" href="${otherHref}" hreflang="${u.otherLang}" lang="${u.otherLang}">${u.other}</a>
+    <button class="theme" type="button" aria-label="${u.theme}" title="${u.theme}"><span aria-hidden="true"></span></button>
+  </div>
+</dialog>`;
+}
+
+function bottomNav(lang, pages, current) {
+  const u = UI[lang];
+  const seq = sequence(pages);
+  const i = seq.indexOf(current);
+  const prev = i > 0 ? seq[i - 1] : null;
+  const next = i >= 0 && i < seq.length - 1 ? seq[i + 1] : null;
+  const link = (s, icon, label, cls) => s
+    ? `<a class="bn ${cls}" href="${hrefFor(s)}">${icon}<span>${label}</span></a>`
+    : `<span class="bn ${cls}" aria-disabled="true">${icon}<span>${label}</span></span>`;
+  return `<nav class="bottom-nav" aria-label="${u.mainNav}">
+  <a class="bn" href="index.html"${current === '00-home' ? ' aria-current="page"' : ''}>${ICON.home}<span>${u.home}</span></a>
+  ${link(prev, ICON.prev, u.prev, 'prev')}
+  <button class="bn open-menu" type="button" aria-haspopup="dialog">${ICON.menu}<span>${u.chapters}</span></button>
+  ${link(next, ICON.next, u.next, 'next')}
+</nav>`;
+}
+
 function layout({ lang, title, body, slug, pages, bodyClass = '' }) {
   const u = UI[lang];
   const otherExists = fs.existsSync(path.join(ROOT, 'content', u.otherLang, `${slug}.md`));
@@ -101,11 +157,14 @@ function layout({ lang, title, body, slug, pages, bodyClass = '' }) {
 <header class="bar">
   <a class="brand" href="index.html"><span class="mark" aria-hidden="true"></span><span>${esc(u.site)}</span></a>
   <nav class="bar-nav">
+    <a class="home-link${slug === '00-home' ? ' is-here' : ''}" href="index.html"${slug === '00-home' ? ' aria-current="page"' : ''}>${ICON.home}<span>${u.home}</span></a>
     ${nav(lang, pages, slug)}
     <a class="lang" href="${otherHref}" hreflang="${u.otherLang}" lang="${u.otherLang}">${u.other}</a>
     <button class="theme" type="button" aria-label="${u.theme}" title="${u.theme}"><span aria-hidden="true"></span></button>
+    <button class="icon-btn open-menu" type="button" aria-haspopup="dialog" aria-label="${u.menu}">${ICON.menu}</button>
   </nav>
 </header>
+${drawer(lang, pages, slug, otherHref)}
 <main id="main">
 ${body}
 </main>
@@ -113,6 +172,7 @@ ${body}
   <p>${esc(u.footer)}</p>
   <p><a href="${VIDEO}" target="_blank" rel="noopener">${u.watch}</a> · <a href="glossary.html">${u.glossary}</a> · <a href="sources.html">${u.sources}</a></p>
 </footer>
+${bottomNav(lang, pages, slug)}
 <script src="../assets/site.js" defer></script>
 <script src="../assets/widgets.js" defer></script>
 </body>

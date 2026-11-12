@@ -1,11 +1,25 @@
 (function () {
   var root = document.documentElement;
-  var btn = document.querySelector('.theme');
-  if (btn) btn.addEventListener('click', function () {
-    var dark = root.dataset.theme ? root.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
-    root.dataset.theme = dark ? 'light' : 'dark';
-    try { localStorage.setItem('theme', root.dataset.theme); } catch (e) {}
+  document.querySelectorAll('.theme').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var dark = root.dataset.theme ? root.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+      root.dataset.theme = dark ? 'light' : 'dark';
+      try { localStorage.setItem('theme', root.dataset.theme); } catch (e) {}
+    });
   });
+  // slide-out menu
+  var drawer = document.querySelector('.drawer');
+  if (drawer && drawer.showModal) {
+    document.querySelectorAll('.open-menu').forEach(function (b) {
+      b.addEventListener('click', function () { drawer.showModal(); document.body.classList.add('menu-open'); });
+    });
+    var shut = function () { drawer.classList.add('closing'); setTimeout(function () { drawer.classList.remove('closing'); drawer.close(); }, 180); };
+    drawer.querySelector('.drawer-close').addEventListener('click', shut);
+    drawer.addEventListener('click', function (e) { if (e.target === drawer) shut(); });
+    drawer.addEventListener('close', function () { document.body.classList.remove('menu-open'); });
+    var here = drawer.querySelector('ol [aria-current]');
+    if (here) drawer.addEventListener('animationstart', function () { here.scrollIntoView({ block: 'center' }); }, { once: true });
+  }
   // stagger article blocks on load
   document.querySelectorAll('.reveal > *').forEach(function (el, i) { el.style.setProperty('--d', Math.min(i, 14)); });
   // figure labels: "Fig. 5.1"
