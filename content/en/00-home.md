@@ -1,12 +1,12 @@
 ---
-title: "Research, explained"
+title: "Claiming Ideas"
 kicker: "A study companion · 8 chapters · English and Arabic"
 subtitle: "A companion to the conversation with Salman Butt on how research becomes business value"
 video: "https://www.youtube.com/watch?v=0t0UiPQnskk"
 length: "1:15:47"
 ---
 
-# Research, explained
+# Claiming Ideas
 
 **The episode's argument in one paragraph.** Products can be copied, but knowledge that has been researched, published and patented cannot. Companies that want to last therefore need *knowledge assets*. That means research centres, papers, patents and the people who can turn them into products. Big companies around the world do this routinely. In Saudi Arabia it happens mostly at giants like Aramco and SABIC. Salman Butt, who co-founded the e-commerce platform Salla and later KnowledgeX, explains how the pipeline works, why it is hard to fund, and what it looks like when it works. His example is a forecast that helped a merchant sell out his warehouse before Eid.
 

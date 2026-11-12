@@ -1,4 +1,4 @@
-/* Interactive figures for "Research, explained". Vanilla JS, no dependencies. */
+/* Interactive figures for "Claiming Ideas". Vanilla JS, no dependencies. */
 (function () {
   'use strict';
   var LANG = document.documentElement.lang === 'ar' ? 'ar' : 'en';
