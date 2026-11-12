@@ -14,3 +14,11 @@ A bilingual (English and Arabic) companion site for the podcast episode with **S
 | `docs/design-brief.md` | Visual direction for the site |
 
 The site will be static and is meant for Cloudflare Pages.
+
+## Deploy
+
+Hosted on Cloudflare Pages, which rebuilds on every push to `main`.
+
+- Build command: `npm run build`
+- Output folder: `dist`
+- Framework preset: None
