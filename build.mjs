@@ -146,11 +146,10 @@ function layout({ lang, title, body, slug, pages, bodyClass = '' }) {
 <meta name="theme-color" content="#12343b">
 <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
 <link rel="alternate" hreflang="${u.otherLang}" href="${otherHref}">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&family=Martian+Mono:wght@400;600&family=Reem+Kufi:wght@500;700&family=Noto+Naskh+Arabic:wght@400;600&display=swap" rel="stylesheet">
+<link rel="preload" href="../assets/fonts/${lang === 'ar' ? 'noto-naskh-arabic-arabic-400' : 'literata-latin-400'}.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/fonts.css">
 <link rel="stylesheet" href="../assets/style.css">
-<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+<script src="../assets/theme.js"></script>
 </head>
 <body class="${bodyClass}">
 <a class="skip" href="#main">${u.skip}</a>
