@@ -44,7 +44,7 @@ A patent is an **asset with a running cost**. It can earn money by being used or
 - **Use** patents that fit an internal venture or a spin-out.
 - **Drop** patents on obsolete technology, so you stop paying fees for nothing.
 
-Counting patents rewards filing. Managing them rewards *using* them. That is the shift the episode argues for.
+The episode argues for judging patents by how they are used rather than by how many there are.
 
 **Readiness levels.** KnowledgeX's site says SPINx scores four kinds of readiness: technology (TRL), business (BRL), commercial (CRL) and societal (SRL) ([KnowledgeX](https://knowledgex.sa/)). TRL is a standard 1 to 9 scale that NASA created, running from "basic principles observed" to "proven in operation". The others extend the same idea to the market.
 

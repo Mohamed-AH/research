@@ -19,13 +19,13 @@ starts: "11:53"
 
 ## The idea, explained
 
-This is a textbook deep-tech recipe: **old science + newly cheap hardware + AI**.
+The product combines three things: **old science, hardware that has become cheap, and AI**.
 
 - *Old science:* thermography has been studied in medicine for decades.
-- *Cheap hardware:* thermal sensors that once cost a fortune now clip onto a phone.
+- *Cheap hardware:* thermal sensors that once needed specialist equipment now clip onto a phone.
 - *AI:* a trained model compares the two feet pixel by pixel and turns a fuzzy colour image into a risk score.
 
-None of the three is new on its own. The value is in combining them and proving it works clinically, which is why it counts as deep tech.
+None of the three is new. What is new is combining them and proving the result works in clinical studies.
 
 ## Context and evidence
 

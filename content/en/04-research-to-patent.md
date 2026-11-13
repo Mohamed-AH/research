@@ -26,7 +26,7 @@ In Saudi Arabia, he says, only large companies like Aramco and SABIC run this pi
 
 ## The idea, explained
 
-The order of steps is the whole point. **File first, publish second.** A patent requires *novelty*: the invention must not already be public anywhere. Your own conference talk counts as public, so publishing first can destroy your own patent. Some countries offer a short grace period for an inventor's own disclosure, but many do not, so companies treat "file first" as a hard rule.
+The order is what matters: **file first, publish second.** A patent requires *novelty*: the invention must not already be public anywhere. Your own conference talk counts as public, so publishing first can destroy your own patent. Some countries offer a short grace period for an inventor's own disclosure, but many do not, so companies treat "file first" as a hard rule.
 
 **Patent or secret?** A patent gives you a monopoly of about 20 years, and in return you must publish exactly how the invention works. A trade secret never expires, but it gives no protection if someone works it out on their own. Companies usually patent what can be reverse-engineered from the product and keep secret what can't, such as a model's training data or tuning.
 
